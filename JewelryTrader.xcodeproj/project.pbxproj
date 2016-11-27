@@ -10,9 +10,9 @@
 		B13EDFA81DEB571F00884142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EDFA71DEB571F00884142 /* AppDelegate.swift */; };
 		B13EDFAA1DEB571F00884142 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EDFA91DEB571F00884142 /* ViewController.swift */; };
 		B13EDFAD1DEB571F00884142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13EDFAB1DEB571F00884142 /* Main.storyboard */; };
-		B13EDFB01DEB571F00884142 /* JewelryTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B13EDFAE1DEB571F00884142 /* JewelryTrader.xcdatamodeld */; };
 		B13EDFB21DEB571F00884142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13EDFB11DEB571F00884142 /* Assets.xcassets */; };
 		B13EDFB51DEB571F00884142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13EDFB31DEB571F00884142 /* LaunchScreen.storyboard */; };
+		B14BA0151DEB5BBC00806B52 /* JewelryTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B14BA0131DEB5BBC00806B52 /* JewelryTrader.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		B13EDFA71DEB571F00884142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B13EDFA91DEB571F00884142 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B13EDFAC1DEB571F00884142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B13EDFAF1DEB571F00884142 /* JewelryTrader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JewelryTrader.xcdatamodel; sourceTree = "<group>"; };
 		B13EDFB11DEB571F00884142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13EDFB41DEB571F00884142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B13EDFB61DEB571F00884142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B14BA0141DEB5BBC00806B52 /* JewelryTrader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JewelryTrader.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +56,13 @@
 		B13EDFA61DEB571F00884142 /* JewelryTrader */ = {
 			isa = PBXGroup;
 			children = (
+				B14BA0131DEB5BBC00806B52 /* JewelryTrader.xcdatamodeld */,
 				B13EDFA71DEB571F00884142 /* AppDelegate.swift */,
 				B13EDFA91DEB571F00884142 /* ViewController.swift */,
 				B13EDFAB1DEB571F00884142 /* Main.storyboard */,
 				B13EDFB11DEB571F00884142 /* Assets.xcassets */,
 				B13EDFB31DEB571F00884142 /* LaunchScreen.storyboard */,
 				B13EDFB61DEB571F00884142 /* Info.plist */,
-				B13EDFAE1DEB571F00884142 /* JewelryTrader.xcdatamodeld */,
 			);
 			path = JewelryTrader;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B13EDFAA1DEB571F00884142 /* ViewController.swift in Sources */,
-				B13EDFB01DEB571F00884142 /* JewelryTrader.xcdatamodeld in Sources */,
+				B14BA0151DEB5BBC00806B52 /* JewelryTrader.xcdatamodeld in Sources */,
 				B13EDFA81DEB571F00884142 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,16 +306,17 @@
 				B13EDFBB1DEB571F00884142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B13EDFAE1DEB571F00884142 /* JewelryTrader.xcdatamodeld */ = {
+		B14BA0131DEB5BBC00806B52 /* JewelryTrader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B13EDFAF1DEB571F00884142 /* JewelryTrader.xcdatamodel */,
+				B14BA0141DEB5BBC00806B52 /* JewelryTrader.xcdatamodel */,
 			);
-			currentVersion = B13EDFAF1DEB571F00884142 /* JewelryTrader.xcdatamodel */;
+			currentVersion = B14BA0141DEB5BBC00806B52 /* JewelryTrader.xcdatamodel */;
 			path = JewelryTrader.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -2,77 +2,87 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2657" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Color" representedClassName="Color" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="colors" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
         <attribute name="fullName" attributeType="String" syncable="YES"/>
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sales" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sale" inverseName="customer" inverseEntity="Sale" syncable="YES"/>
     </entity>
     <entity name="Insertion" representedClassName="Insertion" syncable="YES" codeGenerationType="class">
-        <attribute name="info" attributeType="String" syncable="YES"/>
-        <attribute name="isValuable" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isValuable" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="weight" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="product" maxCount="1" deletionRule="Cascade" destinationEntity="Product" inverseName="insertions" inverseEntity="Product" syncable="YES"/>
-        <relationship name="type" maxCount="1" deletionRule="Nullify" destinationEntity="InsertionType" syncable="YES"/>
+        <relationship name="type" maxCount="1" deletionRule="Deny" destinationEntity="InsertionType" inverseName="insertions" inverseEntity="InsertionType" syncable="YES"/>
     </entity>
     <entity name="InsertionType" representedClassName="InsertionType" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="JewelryType" representedClassName="JewelryType" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="Metal" representedClassName="Metal" syncable="YES" codeGenerationType="class">
-        <relationship name="content" maxCount="1" deletionRule="Deny" destinationEntity="MetalContent" syncable="YES"/>
-        <relationship name="product" maxCount="1" deletionRule="Cascade" destinationEntity="Product" inverseName="metal" inverseEntity="Product" syncable="YES"/>
-        <relationship name="type" maxCount="1" deletionRule="Deny" destinationEntity="MetalType" syncable="YES"/>
+        <relationship name="insertions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Insertion" inverseName="type" inverseEntity="Insertion" syncable="YES"/>
     </entity>
     <entity name="MetalContent" representedClassName="MetalContent" syncable="YES" codeGenerationType="class">
-        <attribute name="metalContent" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="content" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="metalContent" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="MetalType" representedClassName="MetalType" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="metalType" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="Photo" syncable="YES" codeGenerationType="class">
+        <attribute name="fileName" attributeType="String" syncable="YES"/>
+        <relationship name="product" maxCount="1" deletionRule="Cascade" destinationEntity="Product" inverseName="photos" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="class">
-        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="incomePrice" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="isPriceCalculatable" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="length" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPriceCalculatable" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="size" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sku" attributeType="String" syncable="YES"/>
         <attribute name="supplyDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="weight" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="width" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="color" maxCount="1" deletionRule="Nullify" destinationEntity="Color" syncable="YES"/>
-        <relationship name="insertions" toMany="YES" deletionRule="Deny" destinationEntity="Insertion" inverseName="product" inverseEntity="Insertion" syncable="YES"/>
-        <relationship name="metal" maxCount="1" deletionRule="Deny" destinationEntity="Metal" inverseName="product" inverseEntity="Metal" syncable="YES"/>
-        <relationship name="provider" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" syncable="YES"/>
-        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JewelryType" syncable="YES"/>
-        <compoundIndexes>
-            <compoundIndex>
-                <index value="sku"/>
-            </compoundIndex>
-        </compoundIndexes>
+        <relationship name="colors" toMany="YES" deletionRule="Deny" destinationEntity="Color" inverseName="products" inverseEntity="Color" syncable="YES"/>
+        <relationship name="insertions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Insertion" inverseName="product" inverseEntity="Insertion" syncable="YES"/>
+        <relationship name="metalContent" maxCount="1" deletionRule="Deny" destinationEntity="MetalContent" inverseName="products" inverseEntity="MetalContent" syncable="YES"/>
+        <relationship name="metalType" maxCount="1" deletionRule="Deny" destinationEntity="MetalType" inverseName="products" inverseEntity="MetalType" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="product" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="provider" maxCount="1" deletionRule="Deny" destinationEntity="Provider" inverseName="products" inverseEntity="Provider" syncable="YES"/>
+        <relationship name="sale" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sale" inverseName="products" inverseEntity="Sale" syncable="YES"/>
+        <relationship name="type" maxCount="1" deletionRule="Deny" destinationEntity="ProductType" inverseName="products" inverseEntity="ProductType" syncable="YES"/>
+    </entity>
+    <entity name="ProductType" representedClassName="ProductType" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="type" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Provider" representedClassName="Provider" syncable="YES" codeGenerationType="class">
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="provider" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Sale" representedClassName="Sale" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="profit" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="customer" maxCount="1" deletionRule="Deny" destinationEntity="Customer" inverseName="sales" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="products" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="sale" inverseEntity="Product" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Color" positionX="-207" positionY="63" width="128" height="60"/>
-        <element name="Customer" positionX="-92" positionY="-99" width="128" height="105"/>
+        <element name="Color" positionX="-207" positionY="63" width="128" height="75"/>
+        <element name="Customer" positionX="-92" positionY="-99" width="128" height="120"/>
         <element name="Insertion" positionX="16" positionY="333" width="128" height="135"/>
-        <element name="InsertionType" positionX="214" positionY="120" width="128" height="60"/>
-        <element name="JewelryType" positionX="-36" positionY="-36" width="128" height="60"/>
-        <element name="Metal" positionX="18" positionY="177" width="128" height="90"/>
-        <element name="MetalContent" positionX="-243" positionY="186" width="128" height="75"/>
-        <element name="MetalType" positionX="124" positionY="18" width="128" height="60"/>
-        <element name="Product" positionX="-9" positionY="126" width="128" height="270"/>
-        <element name="Provider" positionX="79" positionY="-189" width="128" height="105"/>
+        <element name="InsertionType" positionX="214" positionY="120" width="128" height="75"/>
+        <element name="MetalContent" positionX="-243" positionY="186" width="128" height="90"/>
+        <element name="MetalType" positionX="124" positionY="18" width="128" height="75"/>
+        <element name="Photo" positionX="-18" positionY="-18" width="128" height="75"/>
+        <element name="Product" positionX="-9" positionY="126" width="128" height="285"/>
+        <element name="ProductType" positionX="-36" positionY="-36" width="128" height="75"/>
+        <element name="Provider" positionX="79" positionY="-189" width="128" height="120"/>
+        <element name="Sale" positionX="-36" positionY="-36" width="128" height="120"/>
     </elements>
 </model>
