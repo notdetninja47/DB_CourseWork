@@ -37,6 +37,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B17400821DEB0F9100C68AAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1CCEE7D1DEB0E7800658F7B /* LaunchScreen.storyboard */,
+				B1CCEE711DEB0E7800658F7B /* AppDelegate.swift */,
+				B1CCEE7B1DEB0E7800658F7B /* Assets.xcassets */,
+				B1CCEE801DEB0E7800658F7B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B1CCEE651DEB0E7800658F7B = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +67,9 @@
 		B1CCEE701DEB0E7800658F7B /* JewelryTrader */ = {
 			isa = PBXGroup;
 			children = (
-				B1CCEE711DEB0E7800658F7B /* AppDelegate.swift */,
+				B17400821DEB0F9100C68AAF /* Supporting Files */,
 				B1CCEE731DEB0E7800658F7B /* ViewController.swift */,
 				B1CCEE751DEB0E7800658F7B /* Main.storyboard */,
-				B1CCEE7B1DEB0E7800658F7B /* Assets.xcassets */,
-				B1CCEE7D1DEB0E7800658F7B /* LaunchScreen.storyboard */,
-				B1CCEE801DEB0E7800658F7B /* Info.plist */,
 				B1CCEE781DEB0E7800658F7B /* JewelryTrader.xcdatamodeld */,
 			);
 			path = JewelryTrader;
@@ -306,6 +314,7 @@
 				B1CCEE851DEB0E7800658F7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
