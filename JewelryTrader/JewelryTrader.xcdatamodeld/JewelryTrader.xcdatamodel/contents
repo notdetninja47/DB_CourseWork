@@ -14,7 +14,8 @@
         <attribute name="isValuable" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="weight" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InsertionType" syncable="YES"/>
+        <relationship name="product" maxCount="1" deletionRule="Cascade" destinationEntity="Product" inverseName="insertions" inverseEntity="Product" syncable="YES"/>
+        <relationship name="type" maxCount="1" deletionRule="Nullify" destinationEntity="InsertionType" syncable="YES"/>
     </entity>
     <entity name="InsertionType" representedClassName="InsertionType" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" syncable="YES"/>
@@ -24,6 +25,7 @@
     </entity>
     <entity name="Metal" representedClassName="Metal" syncable="YES" codeGenerationType="class">
         <relationship name="content" maxCount="1" deletionRule="Deny" destinationEntity="MetalContent" syncable="YES"/>
+        <relationship name="product" maxCount="1" deletionRule="Cascade" destinationEntity="Product" inverseName="metal" inverseEntity="Product" syncable="YES"/>
         <relationship name="type" maxCount="1" deletionRule="Deny" destinationEntity="MetalType" syncable="YES"/>
     </entity>
     <entity name="MetalContent" representedClassName="MetalContent" syncable="YES" codeGenerationType="class">
@@ -34,10 +36,21 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incomePrice" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPriceCalculatable" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sku" attributeType="String" syncable="YES"/>
-        <relationship name="insertions" toMany="YES" deletionRule="Deny" destinationEntity="Insertion" syncable="YES"/>
-        <relationship name="metal" maxCount="1" deletionRule="Deny" destinationEntity="Metal" syncable="YES"/>
+        <attribute name="supplyDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="weight" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="color" maxCount="1" deletionRule="Nullify" destinationEntity="Color" syncable="YES"/>
+        <relationship name="insertions" toMany="YES" deletionRule="Deny" destinationEntity="Insertion" inverseName="product" inverseEntity="Insertion" syncable="YES"/>
+        <relationship name="metal" maxCount="1" deletionRule="Deny" destinationEntity="Metal" inverseName="product" inverseEntity="Metal" syncable="YES"/>
+        <relationship name="provider" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JewelryType" syncable="YES"/>
         <compoundIndexes>
             <compoundIndex>
                 <index value="sku"/>
@@ -53,13 +66,13 @@
     <elements>
         <element name="Color" positionX="-207" positionY="63" width="128" height="60"/>
         <element name="Customer" positionX="-92" positionY="-99" width="128" height="105"/>
-        <element name="Insertion" positionX="16" positionY="333" width="128" height="120"/>
+        <element name="Insertion" positionX="16" positionY="333" width="128" height="135"/>
         <element name="InsertionType" positionX="214" positionY="120" width="128" height="60"/>
         <element name="JewelryType" positionX="-36" positionY="-36" width="128" height="60"/>
-        <element name="Metal" positionX="18" positionY="177" width="128" height="75"/>
+        <element name="Metal" positionX="18" positionY="177" width="128" height="90"/>
         <element name="MetalContent" positionX="-243" positionY="186" width="128" height="75"/>
         <element name="MetalType" positionX="124" positionY="18" width="128" height="60"/>
-        <element name="Product" positionX="-9" positionY="126" width="128" height="105"/>
+        <element name="Product" positionX="-9" positionY="126" width="128" height="270"/>
         <element name="Provider" positionX="79" positionY="-189" width="128" height="105"/>
     </elements>
 </model>

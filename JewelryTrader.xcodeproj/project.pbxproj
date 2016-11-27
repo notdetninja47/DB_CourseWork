@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B1CCEE721DEB0E7800658F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCEE711DEB0E7800658F7B /* AppDelegate.swift */; };
-		B1CCEE741DEB0E7800658F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCEE731DEB0E7800658F7B /* ViewController.swift */; };
-		B1CCEE771DEB0E7800658F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1CCEE751DEB0E7800658F7B /* Main.storyboard */; };
-		B1CCEE7A1DEB0E7800658F7B /* JewelryTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1CCEE781DEB0E7800658F7B /* JewelryTrader.xcdatamodeld */; };
-		B1CCEE7C1DEB0E7800658F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CCEE7B1DEB0E7800658F7B /* Assets.xcassets */; };
-		B1CCEE7F1DEB0E7800658F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1CCEE7D1DEB0E7800658F7B /* LaunchScreen.storyboard */; };
+		B13EDFA81DEB571F00884142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EDFA71DEB571F00884142 /* AppDelegate.swift */; };
+		B13EDFAA1DEB571F00884142 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13EDFA91DEB571F00884142 /* ViewController.swift */; };
+		B13EDFAD1DEB571F00884142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13EDFAB1DEB571F00884142 /* Main.storyboard */; };
+		B13EDFB01DEB571F00884142 /* JewelryTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B13EDFAE1DEB571F00884142 /* JewelryTrader.xcdatamodeld */; };
+		B13EDFB21DEB571F00884142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13EDFB11DEB571F00884142 /* Assets.xcassets */; };
+		B13EDFB51DEB571F00884142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13EDFB31DEB571F00884142 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B1CCEE6E1DEB0E7800658F7B /* JewelryTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelryTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1CCEE711DEB0E7800658F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1CCEE731DEB0E7800658F7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B1CCEE761DEB0E7800658F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B1CCEE791DEB0E7800658F7B /* JewelryTrader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JewelryTrader.xcdatamodel; sourceTree = "<group>"; };
-		B1CCEE7B1DEB0E7800658F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B1CCEE7E1DEB0E7800658F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B1CCEE801DEB0E7800658F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B13EDFA41DEB571F00884142 /* JewelryTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelryTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13EDFA71DEB571F00884142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B13EDFA91DEB571F00884142 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B13EDFAC1DEB571F00884142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B13EDFAF1DEB571F00884142 /* JewelryTrader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JewelryTrader.xcdatamodel; sourceTree = "<group>"; };
+		B13EDFB11DEB571F00884142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B13EDFB41DEB571F00884142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B13EDFB61DEB571F00884142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B1CCEE6B1DEB0E7800658F7B /* Frameworks */ = {
+		B13EDFA11DEB571F00884142 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,40 +37,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B17400821DEB0F9100C68AAF /* Supporting Files */ = {
+		B13EDF9B1DEB571F00884142 = {
 			isa = PBXGroup;
 			children = (
-				B1CCEE7D1DEB0E7800658F7B /* LaunchScreen.storyboard */,
-				B1CCEE711DEB0E7800658F7B /* AppDelegate.swift */,
-				B1CCEE7B1DEB0E7800658F7B /* Assets.xcassets */,
-				B1CCEE801DEB0E7800658F7B /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B1CCEE651DEB0E7800658F7B = {
-			isa = PBXGroup;
-			children = (
-				B1CCEE701DEB0E7800658F7B /* JewelryTrader */,
-				B1CCEE6F1DEB0E7800658F7B /* Products */,
+				B13EDFA61DEB571F00884142 /* JewelryTrader */,
+				B13EDFA51DEB571F00884142 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B1CCEE6F1DEB0E7800658F7B /* Products */ = {
+		B13EDFA51DEB571F00884142 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1CCEE6E1DEB0E7800658F7B /* JewelryTrader.app */,
+				B13EDFA41DEB571F00884142 /* JewelryTrader.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B1CCEE701DEB0E7800658F7B /* JewelryTrader */ = {
+		B13EDFA61DEB571F00884142 /* JewelryTrader */ = {
 			isa = PBXGroup;
 			children = (
-				B17400821DEB0F9100C68AAF /* Supporting Files */,
-				B1CCEE731DEB0E7800658F7B /* ViewController.swift */,
-				B1CCEE751DEB0E7800658F7B /* Main.storyboard */,
-				B1CCEE781DEB0E7800658F7B /* JewelryTrader.xcdatamodeld */,
+				B13EDFA71DEB571F00884142 /* AppDelegate.swift */,
+				B13EDFA91DEB571F00884142 /* ViewController.swift */,
+				B13EDFAB1DEB571F00884142 /* Main.storyboard */,
+				B13EDFB11DEB571F00884142 /* Assets.xcassets */,
+				B13EDFB31DEB571F00884142 /* LaunchScreen.storyboard */,
+				B13EDFB61DEB571F00884142 /* Info.plist */,
+				B13EDFAE1DEB571F00884142 /* JewelryTrader.xcdatamodeld */,
 			);
 			path = JewelryTrader;
 			sourceTree = "<group>";
@@ -78,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1CCEE6D1DEB0E7800658F7B /* JewelryTrader */ = {
+		B13EDFA31DEB571F00884142 /* JewelryTrader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1CCEE831DEB0E7800658F7B /* Build configuration list for PBXNativeTarget "JewelryTrader" */;
+			buildConfigurationList = B13EDFB91DEB571F00884142 /* Build configuration list for PBXNativeTarget "JewelryTrader" */;
 			buildPhases = (
-				B1CCEE6A1DEB0E7800658F7B /* Sources */,
-				B1CCEE6B1DEB0E7800658F7B /* Frameworks */,
-				B1CCEE6C1DEB0E7800658F7B /* Resources */,
+				B13EDFA01DEB571F00884142 /* Sources */,
+				B13EDFA11DEB571F00884142 /* Frameworks */,
+				B13EDFA21DEB571F00884142 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,27 +84,27 @@
 			);
 			name = JewelryTrader;
 			productName = JewelryTrader;
-			productReference = B1CCEE6E1DEB0E7800658F7B /* JewelryTrader.app */;
+			productReference = B13EDFA41DEB571F00884142 /* JewelryTrader.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B1CCEE661DEB0E7800658F7B /* Project object */ = {
+		B13EDF9C1DEB571F00884142 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Daniel Slupskiy";
 				TargetAttributes = {
-					B1CCEE6D1DEB0E7800658F7B = {
+					B13EDFA31DEB571F00884142 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = BD5CJ8U5EG;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = B1CCEE691DEB0E7800658F7B /* Build configuration list for PBXProject "JewelryTrader" */;
+			buildConfigurationList = B13EDF9F1DEB571F00884142 /* Build configuration list for PBXProject "JewelryTrader" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,55 +112,55 @@
 				en,
 				Base,
 			);
-			mainGroup = B1CCEE651DEB0E7800658F7B;
-			productRefGroup = B1CCEE6F1DEB0E7800658F7B /* Products */;
+			mainGroup = B13EDF9B1DEB571F00884142;
+			productRefGroup = B13EDFA51DEB571F00884142 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1CCEE6D1DEB0E7800658F7B /* JewelryTrader */,
+				B13EDFA31DEB571F00884142 /* JewelryTrader */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B1CCEE6C1DEB0E7800658F7B /* Resources */ = {
+		B13EDFA21DEB571F00884142 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1CCEE7F1DEB0E7800658F7B /* LaunchScreen.storyboard in Resources */,
-				B1CCEE7C1DEB0E7800658F7B /* Assets.xcassets in Resources */,
-				B1CCEE771DEB0E7800658F7B /* Main.storyboard in Resources */,
+				B13EDFB51DEB571F00884142 /* LaunchScreen.storyboard in Resources */,
+				B13EDFB21DEB571F00884142 /* Assets.xcassets in Resources */,
+				B13EDFAD1DEB571F00884142 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B1CCEE6A1DEB0E7800658F7B /* Sources */ = {
+		B13EDFA01DEB571F00884142 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1CCEE741DEB0E7800658F7B /* ViewController.swift in Sources */,
-				B1CCEE7A1DEB0E7800658F7B /* JewelryTrader.xcdatamodeld in Sources */,
-				B1CCEE721DEB0E7800658F7B /* AppDelegate.swift in Sources */,
+				B13EDFAA1DEB571F00884142 /* ViewController.swift in Sources */,
+				B13EDFB01DEB571F00884142 /* JewelryTrader.xcdatamodeld in Sources */,
+				B13EDFA81DEB571F00884142 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B1CCEE751DEB0E7800658F7B /* Main.storyboard */ = {
+		B13EDFAB1DEB571F00884142 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B1CCEE761DEB0E7800658F7B /* Base */,
+				B13EDFAC1DEB571F00884142 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B1CCEE7D1DEB0E7800658F7B /* LaunchScreen.storyboard */ = {
+		B13EDFB31DEB571F00884142 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B1CCEE7E1DEB0E7800658F7B /* Base */,
+				B13EDFB41DEB571F00884142 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -176,7 +168,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B1CCEE811DEB0E7800658F7B /* Debug */ = {
+		B13EDFB71DEB571F00884142 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +218,7 @@
 			};
 			name = Debug;
 		};
-		B1CCEE821DEB0E7800658F7B /* Release */ = {
+		B13EDFB81DEB571F00884142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,7 +261,7 @@
 			};
 			name = Release;
 		};
-		B1CCEE841DEB0E7800658F7B /* Debug */ = {
+		B13EDFBA1DEB571F00884142 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -282,7 +274,7 @@
 			};
 			name = Debug;
 		};
-		B1CCEE851DEB0E7800658F7B /* Release */ = {
+		B13EDFBB1DEB571F00884142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,38 +290,37 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B1CCEE691DEB0E7800658F7B /* Build configuration list for PBXProject "JewelryTrader" */ = {
+		B13EDF9F1DEB571F00884142 /* Build configuration list for PBXProject "JewelryTrader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1CCEE811DEB0E7800658F7B /* Debug */,
-				B1CCEE821DEB0E7800658F7B /* Release */,
+				B13EDFB71DEB571F00884142 /* Debug */,
+				B13EDFB81DEB571F00884142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1CCEE831DEB0E7800658F7B /* Build configuration list for PBXNativeTarget "JewelryTrader" */ = {
+		B13EDFB91DEB571F00884142 /* Build configuration list for PBXNativeTarget "JewelryTrader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1CCEE841DEB0E7800658F7B /* Debug */,
-				B1CCEE851DEB0E7800658F7B /* Release */,
+				B13EDFBA1DEB571F00884142 /* Debug */,
+				B13EDFBB1DEB571F00884142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B1CCEE781DEB0E7800658F7B /* JewelryTrader.xcdatamodeld */ = {
+		B13EDFAE1DEB571F00884142 /* JewelryTrader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B1CCEE791DEB0E7800658F7B /* JewelryTrader.xcdatamodel */,
+				B13EDFAF1DEB571F00884142 /* JewelryTrader.xcdatamodel */,
 			);
-			currentVersion = B1CCEE791DEB0E7800658F7B /* JewelryTrader.xcdatamodel */;
+			currentVersion = B13EDFAF1DEB571F00884142 /* JewelryTrader.xcdatamodel */;
 			path = JewelryTrader.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = B1CCEE661DEB0E7800658F7B /* Project object */;
+	rootObject = B13EDF9C1DEB571F00884142 /* Project object */;
 }
