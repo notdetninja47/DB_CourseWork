@@ -73,16 +73,16 @@
         <relationship name="products" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="sale" inverseEntity="Product" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Color" positionX="-207" positionY="63" width="128" height="75"/>
-        <element name="Customer" positionX="-92" positionY="-99" width="128" height="120"/>
-        <element name="Insertion" positionX="16" positionY="333" width="128" height="135"/>
-        <element name="InsertionType" positionX="214" positionY="120" width="128" height="75"/>
-        <element name="MetalContent" positionX="-243" positionY="186" width="128" height="90"/>
-        <element name="MetalType" positionX="124" positionY="18" width="128" height="75"/>
-        <element name="Photo" positionX="-18" positionY="-18" width="128" height="75"/>
-        <element name="Product" positionX="-9" positionY="126" width="128" height="285"/>
-        <element name="ProductType" positionX="-36" positionY="-36" width="128" height="75"/>
-        <element name="Provider" positionX="79" positionY="-189" width="128" height="120"/>
-        <element name="Sale" positionX="-36" positionY="-36" width="128" height="120"/>
+        <element name="Color" positionX="-378" positionY="258" width="128" height="75"/>
+        <element name="Customer" positionX="-207" positionY="-54" width="128" height="120"/>
+        <element name="Insertion" positionX="79" positionY="216" width="128" height="135"/>
+        <element name="InsertionType" positionX="241" positionY="132" width="128" height="75"/>
+        <element name="MetalContent" positionX="-378" positionY="351" width="128" height="90"/>
+        <element name="MetalType" positionX="232" positionY="342" width="128" height="75"/>
+        <element name="Photo" positionX="241" positionY="441" width="128" height="75"/>
+        <element name="Product" positionX="-162" positionY="192" width="128" height="285"/>
+        <element name="ProductType" positionX="63" positionY="708" width="128" height="75"/>
+        <element name="Provider" positionX="97" positionY="546" width="128" height="120"/>
+        <element name="Sale" positionX="-362" positionY="114" width="128" height="120"/>
     </elements>
 </model>
