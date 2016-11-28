@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B13EDFA31DEB571F00884142"
+               BlueprintIdentifier = "B1EA31911DEBCB9400E8FDC2"
                BuildableName = "JewelryTrader.app"
                BlueprintName = "JewelryTrader"
                ReferencedContainer = "container:JewelryTrader.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B13EDFA31DEB571F00884142"
+            BlueprintIdentifier = "B1EA31911DEBCB9400E8FDC2"
             BuildableName = "JewelryTrader.app"
             BlueprintName = "JewelryTrader"
             ReferencedContainer = "container:JewelryTrader.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B13EDFA31DEB571F00884142"
+            BlueprintIdentifier = "B1EA31911DEBCB9400E8FDC2"
             BuildableName = "JewelryTrader.app"
             BlueprintName = "JewelryTrader"
             ReferencedContainer = "container:JewelryTrader.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B13EDFA31DEB571F00884142"
+            BlueprintIdentifier = "B1EA31911DEBCB9400E8FDC2"
             BuildableName = "JewelryTrader.app"
             BlueprintName = "JewelryTrader"
             ReferencedContainer = "container:JewelryTrader.xcodeproj">
