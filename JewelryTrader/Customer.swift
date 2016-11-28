@@ -12,6 +12,7 @@ import CoreData
 @objc(Customer)
 class Customer: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    convenience init() {
+        self.init(entity: CoreDataManager.instance.entityForName("Customer"), insertIntoManagedObjectContext: CoreDataManager.instance.managedObjectContext)
+    }
 }

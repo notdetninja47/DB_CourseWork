@@ -12,6 +12,7 @@ import CoreData
 @objc(MetalType)
 class MetalType: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    convenience init() {
+        self.init(entity: CoreDataManager.instance.entityForName("MetalType"), insertIntoManagedObjectContext: CoreDataManager.instance.managedObjectContext)
+    }
 }

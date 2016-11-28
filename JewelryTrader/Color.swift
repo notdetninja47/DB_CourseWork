@@ -12,6 +12,7 @@ import CoreData
 @objc(Color)
 class Color: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    convenience init() {
+        self.init(entity: CoreDataManager.instance.entityForName("Color"), insertIntoManagedObjectContext: CoreDataManager.instance.managedObjectContext)
+    }
 }

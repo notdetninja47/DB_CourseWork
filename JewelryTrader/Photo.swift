@@ -12,6 +12,7 @@ import CoreData
 @objc(Photo)
 class Photo: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    convenience init() {
+        self.init(entity: CoreDataManager.instance.entityForName("Photo"), insertIntoManagedObjectContext: CoreDataManager.instance.managedObjectContext)
+    }
 }

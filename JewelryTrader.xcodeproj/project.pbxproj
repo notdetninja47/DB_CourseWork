@@ -29,6 +29,7 @@
 		B197D5B21DEBCD660067F866 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59C1DEBCD660067F866 /* Customer.swift */; };
 		B197D5B31DEBCD660067F866 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59D1DEBCD660067F866 /* Product+CoreDataProperties.swift */; };
 		B197D5B41DEBCD660067F866 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59E1DEBCD660067F866 /* Product.swift */; };
+		B197D5BA1DEBCF910067F866 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5B91DEBCF910067F866 /* CoreDataManager.swift */; };
 		B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */; };
 		B1EA31981DEBCB9400E8FDC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31971DEBCB9400E8FDC2 /* ViewController.swift */; };
 		B1EA319B1DEBCB9400E8FDC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EA31991DEBCB9400E8FDC2 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		B197D59C1DEBCD660067F866 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		B197D59D1DEBCD660067F866 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B197D59E1DEBCD660067F866 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B197D5B91DEBCF910067F866 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B1EA31921DEBCB9400E8FDC2 /* JewelryTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelryTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1EA31971DEBCB9400E8FDC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				B197D5B51DEBCD790067F866 /* Model + Storage */,
 				B1EA319C1DEBCB9400E8FDC2 /* JewelryTrader.xcdatamodeld */,
+				B197D5B91DEBCF910067F866 /* CoreDataManager.swift */,
 			);
 			name = Storage;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				B197D5AE1DEBCD660067F866 /* MetalType.swift in Sources */,
 				B1EA319E1DEBCB9400E8FDC2 /* JewelryTrader.xcdatamodeld in Sources */,
 				B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */,
+				B197D5BA1DEBCF910067F866 /* CoreDataManager.swift in Sources */,
 				B197D5A31DEBCD660067F866 /* Provider+CoreDataProperties.swift in Sources */,
 				B197D5AD1DEBCD660067F866 /* MetalType+CoreDataProperties.swift in Sources */,
 				B197D5A11DEBCD660067F866 /* MetalContent+CoreDataProperties.swift in Sources */,

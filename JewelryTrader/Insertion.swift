@@ -12,6 +12,7 @@ import CoreData
 @objc(Insertion)
 class Insertion: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    convenience init() {
+        self.init(entity: CoreDataManager.instance.entityForName("Insertion"), insertIntoManagedObjectContext: CoreDataManager.instance.managedObjectContext)
+    }
 }
