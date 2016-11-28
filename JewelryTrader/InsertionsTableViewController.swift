@@ -1,5 +1,5 @@
 //
-//  MetalContentsTableViewController.swift
+//  InsertionsTableViewController.swift
 //  JewelryTrader
 //
 //  Created by Daniel Slupskiy on 28.11.16.
@@ -9,18 +9,18 @@
 import UIKit
 import CoreData
 
-class MetalContentTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class InsertionsTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    typealias Select = (MetalContent?) -> ()
-    var didSelect: Select?
+    var product: Product?
+    var fetchedResultsController:NSFetchedResultsController?
     
-    var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("MetalContent", keyForSort: "name")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchedResultsController.delegate = self
+        fetchedResultsController = Product.getInsertions(product!)
+        fetchedResultsController!.delegate = self
         do {
-            try fetchedResultsController.performFetch()
+            try fetchedResultsController!.performFetch()
         } catch {
             print(error)
         }
@@ -29,7 +29,7 @@ class MetalContentTableViewController: UITableViewController, NSFetchedResultsCo
     // MARK: - Table View Data Source
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let sections = fetchedResultsController.sections {
+        if let sections = fetchedResultsController!.sections {
             return sections[section].numberOfObjects
         } else {
             return 0
@@ -37,34 +37,35 @@ class MetalContentTableViewController: UITableViewController, NSFetchedResultsCo
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let metalContent = fetchedResultsController.objectAtIndexPath(indexPath) as! MetalContent
+        let insertion = fetchedResultsController!.objectAtIndexPath(indexPath) as! Insertion
         let cell = UITableViewCell()
-        cell.textLabel?.text = metalContent.name
+        cell.textLabel?.text = insertion.name
         return cell
     }
-    @IBAction func AddMetalContent(sender: UIBarButtonItem) {
-        performSegueWithIdentifier("metalContentsToMetalContent", sender: nil)
+    @IBAction func AddInsertion(sender: UIBarButtonItem) {
+        let insertion = Insertion()
+        insertion.product = product!
+        performSegueWithIdentifier("insertionsToInsertion", sender: insertion)
+    
+    }
+    @IBAction func goBack(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let metalContent = fetchedResultsController.objectAtIndexPath(indexPath) as? MetalContent
-        if let dSelect = self.didSelect {
-            dSelect(metalContent)
-            dismissViewControllerAnimated(true, completion: nil)
-        } else {
-            performSegueWithIdentifier("metalContentsToMetalContent", sender: metalContent)
-        }
+        let insertion = fetchedResultsController!.objectAtIndexPath(indexPath) as? Insertion
+        performSegueWithIdentifier("insertionsToInsertion", sender: insertion)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "metalContentsToMetalContent" {
-            let controller = segue.destinationViewController as! MetalContentViewController
-            controller.entity = sender as? MetalContent
+        if segue.identifier == "insertionsToInsertion" {
+            let controller = segue.destinationViewController as! InsertionViewController
+            controller.entity = sender as? Insertion
         }
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            let managedObject = fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+            let managedObject = fetchedResultsController!.objectAtIndexPath(indexPath) as! NSManagedObject
             CoreDataManager.instance.managedObjectContext.deleteObject(managedObject)
             CoreDataManager.instance.saveContext()
         }
@@ -84,9 +85,9 @@ class MetalContentTableViewController: UITableViewController, NSFetchedResultsCo
             }
         case .Update:
             if let indexPath = indexPath {
-                let metalContent = fetchedResultsController.objectAtIndexPath(indexPath) as! MetalContent
+                let insertion = fetchedResultsController!.objectAtIndexPath(indexPath) as! Insertion
                 let cell = tableView.cellForRowAtIndexPath(indexPath)
-                cell!.textLabel?.text = metalContent.name
+                cell!.textLabel?.text = insertion.name
             }
         case .Move:
             if let indexPath = indexPath {

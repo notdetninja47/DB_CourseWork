@@ -2,40 +2,40 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="16B2657" minimumToolsVersion="Automatic">
     <entity name="Color" representedClassName="Color" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="colors" inverseEntity="Product" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="color" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Customer" representedClassName="Customer" syncable="YES">
         <attribute name="fullName" attributeType="String" syncable="YES"/>
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="sales" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sale" inverseName="customer" inverseEntity="Sale" syncable="YES"/>
+        <relationship name="sales" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Sale" inverseName="customer" inverseEntity="Sale" syncable="YES"/>
     </entity>
     <entity name="Insertion" representedClassName="Insertion" syncable="YES">
         <attribute name="isValuable" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="weight" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="product" maxCount="1" deletionRule="Cascade" destinationEntity="Product" inverseName="insertions" inverseEntity="Product" syncable="YES"/>
-        <relationship name="type" maxCount="1" deletionRule="Deny" destinationEntity="InsertionType" inverseName="insertions" inverseEntity="InsertionType" syncable="YES"/>
+        <relationship name="product" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="insertions" inverseEntity="Product" syncable="YES"/>
+        <relationship name="type" maxCount="1" deletionRule="Nullify" destinationEntity="InsertionType" inverseName="insertions" inverseEntity="InsertionType" syncable="YES"/>
     </entity>
     <entity name="InsertionType" representedClassName="InsertionType" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <relationship name="insertions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Insertion" inverseName="type" inverseEntity="Insertion" syncable="YES"/>
+        <relationship name="insertions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Insertion" inverseName="type" inverseEntity="Insertion" syncable="YES"/>
     </entity>
     <entity name="MetalContent" representedClassName="MetalContent" syncable="YES">
         <attribute name="content" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="metalContent" inverseEntity="Product" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="metalContent" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="MetalType" representedClassName="MetalType" syncable="YES">
         <attribute name="currentPrice" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="metalType" inverseEntity="Product" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="metalType" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Photo" representedClassName="Photo" syncable="YES">
         <attribute name="fileName" attributeType="String" syncable="YES"/>
-        <relationship name="product" maxCount="1" deletionRule="Cascade" destinationEntity="Product" inverseName="photos" inverseEntity="Product" syncable="YES"/>
+        <relationship name="product" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="photos" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Product" representedClassName="Product" syncable="YES">
         <attribute name="incomePrice" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -46,32 +46,32 @@
         <attribute name="sku" attributeType="String" syncable="YES"/>
         <attribute name="supplyDate" attributeType="Date" syncable="YES"/>
         <attribute name="weight" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="colors" toMany="YES" deletionRule="Deny" destinationEntity="Color" inverseName="products" inverseEntity="Color" syncable="YES"/>
-        <relationship name="insertions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Insertion" inverseName="product" inverseEntity="Insertion" syncable="YES"/>
-        <relationship name="metalContent" maxCount="1" deletionRule="Deny" destinationEntity="MetalContent" inverseName="products" inverseEntity="MetalContent" syncable="YES"/>
-        <relationship name="metalType" maxCount="1" deletionRule="Deny" destinationEntity="MetalType" inverseName="products" inverseEntity="MetalType" syncable="YES"/>
-        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="product" inverseEntity="Photo" syncable="YES"/>
-        <relationship name="provider" maxCount="1" deletionRule="Deny" destinationEntity="Provider" inverseName="products" inverseEntity="Provider" syncable="YES"/>
-        <relationship name="sale" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sale" inverseName="products" inverseEntity="Sale" syncable="YES"/>
-        <relationship name="type" maxCount="1" deletionRule="Deny" destinationEntity="ProductType" inverseName="products" inverseEntity="ProductType" syncable="YES"/>
+        <relationship name="color" maxCount="1" deletionRule="Nullify" destinationEntity="Color" inverseName="products" inverseEntity="Color" syncable="YES"/>
+        <relationship name="insertions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Insertion" inverseName="product" inverseEntity="Insertion" syncable="YES"/>
+        <relationship name="metalContent" maxCount="1" deletionRule="Nullify" destinationEntity="MetalContent" inverseName="products" inverseEntity="MetalContent" syncable="YES"/>
+        <relationship name="metalType" maxCount="1" deletionRule="Nullify" destinationEntity="MetalType" inverseName="products" inverseEntity="MetalType" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Photo" inverseName="product" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="provider" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="products" inverseEntity="Provider" syncable="YES"/>
+        <relationship name="sale" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Sale" inverseName="product" inverseEntity="Sale" syncable="YES"/>
+        <relationship name="type" maxCount="1" deletionRule="Nullify" destinationEntity="ProductType" inverseName="products" inverseEntity="ProductType" syncable="YES"/>
     </entity>
     <entity name="ProductType" representedClassName="ProductType" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="type" inverseEntity="Product" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="type" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Provider" representedClassName="Provider" syncable="YES">
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="provider" inverseEntity="Product" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="provider" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Sale" representedClassName="Sale" syncable="YES">
         <attribute name="amount" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="date" attributeType="Date" syncable="YES"/>
         <attribute name="profit" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="customer" maxCount="1" deletionRule="Deny" destinationEntity="Customer" inverseName="sales" inverseEntity="Customer" syncable="YES"/>
-        <relationship name="products" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="sale" inverseEntity="Product" syncable="YES"/>
+        <relationship name="customer" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="sales" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="product" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="sale" inverseEntity="Product" syncable="YES"/>
     </entity>
     <elements>
         <element name="Color" positionX="-378" positionY="258" width="128" height="75"/>

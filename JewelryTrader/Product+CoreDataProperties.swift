@@ -22,7 +22,7 @@ extension Product {
     @NSManaged var sku: String?
     @NSManaged var supplyDate: NSTimeInterval
     @NSManaged var weight: Float
-    @NSManaged var colors: NSSet?
+    @NSManaged var color: Color?
     @NSManaged var insertions: NSSet?
     @NSManaged var metalContent: MetalContent?
     @NSManaged var metalType: MetalType?

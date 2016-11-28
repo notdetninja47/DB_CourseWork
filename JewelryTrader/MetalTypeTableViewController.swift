@@ -11,6 +11,9 @@ import CoreData
 
 class MetalTypeTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    typealias Select = (MetalType?) -> ()
+    var didSelect: Select?
+    
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("MetalType", keyForSort: "name")
     
     override func viewDidLoad() {
@@ -44,7 +47,12 @@ class MetalTypeTableViewController: UITableViewController, NSFetchedResultsContr
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let metalType = fetchedResultsController.objectAtIndexPath(indexPath) as? MetalType
-        performSegueWithIdentifier("metalTypesToMetalType", sender: metalType)
+        if let dSelect = self.didSelect {
+            dSelect(metalType)
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            performSegueWithIdentifier("metalTypesToMetalType", sender: metalType)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -55,9 +55,19 @@ class MetalTypeViewController: UIViewController {
         if let entity = entity {
             entity.name = nameTextField.text
             entity.currentPrice = Float(priceTextField.text!)!
+            recalculateProductsPrices()
             CoreDataManager.instance.saveContext()
         }
         return true
+    }
+    func recalculateProductsPrices() {
+        for product in entity!.products! {
+            if let product = product as? Product {
+                if product.isPriceCalculatable {
+                    product.price = product.automaticallyRecountPrice()
+                }
+            }
+        }
     }
 
 }

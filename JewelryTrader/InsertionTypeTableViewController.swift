@@ -11,6 +11,9 @@ import CoreData
 
 class InsertionTypeTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    typealias Select = (InsertionType?) -> ()
+    var didSelect: Select?
+    
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("InsertionType", keyForSort: "name")
     
     override func viewDidLoad() {
@@ -44,7 +47,12 @@ class InsertionTypeTableViewController: UITableViewController, NSFetchedResultsC
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let insertionType = fetchedResultsController.objectAtIndexPath(indexPath) as? InsertionType
-        performSegueWithIdentifier("insertionTypesToInsertionType", sender: insertionType)
+        if let dSelect = self.didSelect {
+            dSelect(insertionType)
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            performSegueWithIdentifier("insertionTypesToInsertionType", sender: insertionType)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

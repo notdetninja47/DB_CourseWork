@@ -1,5 +1,5 @@
 //
-//  MetalContentsTableViewController.swift
+//  SalesTableViewController.swift
 //  JewelryTrader
 //
 //  Created by Daniel Slupskiy on 28.11.16.
@@ -9,12 +9,9 @@
 import UIKit
 import CoreData
 
-class MetalContentTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-
-    typealias Select = (MetalContent?) -> ()
-    var didSelect: Select?
+class SalesTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("MetalContent", keyForSort: "name")
+    var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("Sale", keyForSort: "date")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,28 +34,23 @@ class MetalContentTableViewController: UITableViewController, NSFetchedResultsCo
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let metalContent = fetchedResultsController.objectAtIndexPath(indexPath) as! MetalContent
+        let sale = fetchedResultsController.objectAtIndexPath(indexPath) as! Sale
         let cell = UITableViewCell()
-        cell.textLabel?.text = metalContent.name
+        cell.textLabel?.text = "\(sale.product?.name ?? "") + \(sale.profit)"
         return cell
     }
-    @IBAction func AddMetalContent(sender: UIBarButtonItem) {
-        performSegueWithIdentifier("metalContentsToMetalContent", sender: nil)
+    @IBAction func AddSale(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("salesToSale", sender: nil)
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let metalContent = fetchedResultsController.objectAtIndexPath(indexPath) as? MetalContent
-        if let dSelect = self.didSelect {
-            dSelect(metalContent)
-            dismissViewControllerAnimated(true, completion: nil)
-        } else {
-            performSegueWithIdentifier("metalContentsToMetalContent", sender: metalContent)
-        }
+        let sale = fetchedResultsController.objectAtIndexPath(indexPath) as? Sale
+        performSegueWithIdentifier("salesToSale", sender: sale)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "metalContentsToMetalContent" {
-            let controller = segue.destinationViewController as! MetalContentViewController
-            controller.entity = sender as? MetalContent
+        if segue.identifier == "salesToSale" {
+            let controller = segue.destinationViewController as! SaleViewController
+            controller.entity = sender as? Sale
         }
     }
     
@@ -84,9 +76,9 @@ class MetalContentTableViewController: UITableViewController, NSFetchedResultsCo
             }
         case .Update:
             if let indexPath = indexPath {
-                let metalContent = fetchedResultsController.objectAtIndexPath(indexPath) as! MetalContent
+                let sale = fetchedResultsController.objectAtIndexPath(indexPath) as! Sale
                 let cell = tableView.cellForRowAtIndexPath(indexPath)
-                cell!.textLabel?.text = metalContent.name
+                cell!.textLabel!.text = "\(sale.product?.name ?? "") + \(sale.profit)"
             }
         case .Move:
             if let indexPath = indexPath {

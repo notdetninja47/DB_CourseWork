@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1108E381DECA935000FD126 /* InsertionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1108E361DECA935000FD126 /* InsertionsTableViewController.swift */; };
+		B1108E391DECA935000FD126 /* InsertionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1108E371DECA935000FD126 /* InsertionViewController.swift */; };
+		B1108E401DECBFD9000FD126 /* SalesTableViewController — копия.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1108E3E1DECBFD9000FD126 /* SalesTableViewController — копия.swift */; };
+		B1108E411DECBFD9000FD126 /* SaleViewController — копия.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1108E3F1DECBFD9000FD126 /* SaleViewController — копия.swift */; };
+		B1108E431DECCA5D000FD126 /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1108E421DECCA5D000FD126 /* ProductFilter.swift */; };
 		B1311DFA1DEBEF0D00ECAB4B /* MetalContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */; };
 		B1311DFB1DEBEF0D00ECAB4B /* MetalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */; };
 		B1311E011DEBF2A500ECAB4B /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */; };
@@ -42,6 +47,8 @@
 		B197D5BA1DEBCF910067F866 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5B91DEBCF910067F866 /* CoreDataManager.swift */; };
 		B1A832131DEBDA5F00EC8080 /* ProductTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */; };
 		B1A832151DEBDDF500EC8080 /* ProductTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */; };
+		B1E841B61DEC09C50071B7AC /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E841B41DEC09C50071B7AC /* ProductsTableViewController.swift */; };
+		B1E841B71DEC09C50071B7AC /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E841B51DEC09C50071B7AC /* ProductViewController.swift */; };
 		B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */; };
 		B1EA31981DEBCB9400E8FDC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31971DEBCB9400E8FDC2 /* ViewController.swift */; };
 		B1EA319B1DEBCB9400E8FDC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EA31991DEBCB9400E8FDC2 /* Main.storyboard */; };
@@ -53,6 +60,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1108E361DECA935000FD126 /* InsertionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionsTableViewController.swift; sourceTree = "<group>"; };
+		B1108E371DECA935000FD126 /* InsertionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionViewController.swift; sourceTree = "<group>"; };
+		B1108E3E1DECBFD9000FD126 /* SalesTableViewController — копия.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SalesTableViewController — копия.swift"; sourceTree = "<group>"; };
+		B1108E3F1DECBFD9000FD126 /* SaleViewController — копия.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SaleViewController — копия.swift"; sourceTree = "<group>"; };
+		B1108E421DECCA5D000FD126 /* ProductFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
 		B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentTableViewController.swift; sourceTree = "<group>"; };
 		B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentViewController.swift; sourceTree = "<group>"; };
 		B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +100,8 @@
 		B197D5B91DEBCF910067F866 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypesTableViewController.swift; sourceTree = "<group>"; };
 		B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypeViewController.swift; sourceTree = "<group>"; };
+		B1E841B41DEC09C50071B7AC /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		B1E841B51DEC09C50071B7AC /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		B1EA31921DEBCB9400E8FDC2 /* JewelryTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelryTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1EA31971DEBCB9400E8FDC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +171,10 @@
 		B1311E0E1DEBF7C100ECAB4B /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				B1108E361DECA935000FD126 /* InsertionsTableViewController.swift */,
+				B1108E371DECA935000FD126 /* InsertionViewController.swift */,
+				B1E841B41DEC09C50071B7AC /* ProductsTableViewController.swift */,
+				B1E841B51DEC09C50071B7AC /* ProductViewController.swift */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,11 +188,13 @@
 			name = Providers;
 			sourceTree = "<group>";
 		};
-		B1311E121DEBF7EB00ECAB4B /* Sells */ = {
+		B1311E121DEBF7EB00ECAB4B /* Sales */ = {
 			isa = PBXGroup;
 			children = (
+				B1108E3E1DECBFD9000FD126 /* SalesTableViewController — копия.swift */,
+				B1108E3F1DECBFD9000FD126 /* SaleViewController — копия.swift */,
 			);
-			name = Sells;
+			name = Sales;
 			sourceTree = "<group>";
 		};
 		B1311E131DEBF7F300ECAB4B /* Customers */ = {
@@ -190,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				B1311E131DEBF7F300ECAB4B /* Customers */,
-				B1311E121DEBF7EB00ECAB4B /* Sells */,
+				B1311E121DEBF7EB00ECAB4B /* Sales */,
 			);
 			name = Shop;
 			sourceTree = "<group>";
@@ -227,6 +247,7 @@
 				B197D59A1DEBCD660067F866 /* Photo.swift */,
 				B197D59C1DEBCD660067F866 /* Customer.swift */,
 				B197D59E1DEBCD660067F866 /* Product.swift */,
+				B1108E421DECCA5D000FD126 /* ProductFilter.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -395,14 +416,17 @@
 			files = (
 				B1311E0A1DEBF4C100ECAB4B /* InsertionTypeViewController.swift in Sources */,
 				B197D5B01DEBCD660067F866 /* Photo.swift in Sources */,
+				B1108E411DECBFD9000FD126 /* SaleViewController — копия.swift in Sources */,
 				B197D5B11DEBCD660067F866 /* Customer+CoreDataProperties.swift in Sources */,
 				B1EF1A831DEBEA9B009CBFD2 /* MetalTypeViewController.swift in Sources */,
 				B197D5A71DEBCD660067F866 /* Sale+CoreDataProperties.swift in Sources */,
 				B197D5AA1DEBCD660067F866 /* Insertion.swift in Sources */,
 				B1311E1B1DEBFCEB00ECAB4B /* CustomersTableViewController.swift in Sources */,
+				B1108E431DECCA5D000FD126 /* ProductFilter.swift in Sources */,
 				B1EF1A821DEBEA9B009CBFD2 /* MetalTypeTableViewController.swift in Sources */,
 				B197D5AC1DEBCD660067F866 /* InsertionType.swift in Sources */,
 				B197D5B21DEBCD660067F866 /* Customer.swift in Sources */,
+				B1108E391DECA935000FD126 /* InsertionViewController.swift in Sources */,
 				B197D5A21DEBCD660067F866 /* MetalContent.swift in Sources */,
 				B197D5B41DEBCD660067F866 /* Product.swift in Sources */,
 				B1311E181DEBF83E00ECAB4B /* ProviderViewController.swift in Sources */,
@@ -412,10 +436,13 @@
 				B1EA31981DEBCB9400E8FDC2 /* ViewController.swift in Sources */,
 				B197D5A51DEBCD660067F866 /* Color+CoreDataProperties.swift in Sources */,
 				B1311DFA1DEBEF0D00ECAB4B /* MetalContentTableViewController.swift in Sources */,
+				B1108E381DECA935000FD126 /* InsertionsTableViewController.swift in Sources */,
 				B1311DFB1DEBEF0D00ECAB4B /* MetalContentViewController.swift in Sources */,
 				B1A832131DEBDA5F00EC8080 /* ProductTypesTableViewController.swift in Sources */,
 				B197D59F1DEBCD660067F866 /* ProductType+CoreDataProperties.swift in Sources */,
+				B1E841B61DEC09C50071B7AC /* ProductsTableViewController.swift in Sources */,
 				B197D5AB1DEBCD660067F866 /* InsertionType+CoreDataProperties.swift in Sources */,
+				B1E841B71DEC09C50071B7AC /* ProductViewController.swift in Sources */,
 				B1311E091DEBF4C100ECAB4B /* InsertionTypeTableViewController.swift in Sources */,
 				B1311E011DEBF2A500ECAB4B /* ColorTableViewController.swift in Sources */,
 				B1A832151DEBDDF500EC8080 /* ProductTypeViewController.swift in Sources */,
@@ -423,6 +450,7 @@
 				B197D5B31DEBCD660067F866 /* Product+CoreDataProperties.swift in Sources */,
 				B197D5A41DEBCD660067F866 /* Provider.swift in Sources */,
 				B197D5AE1DEBCD660067F866 /* MetalType.swift in Sources */,
+				B1108E401DECBFD9000FD126 /* SalesTableViewController — копия.swift in Sources */,
 				B1EA319E1DEBCB9400E8FDC2 /* JewelryTrader.xcdatamodeld in Sources */,
 				B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */,
 				B1311E1C1DEBFCEB00ECAB4B /* CustomerViewController.swift in Sources */,

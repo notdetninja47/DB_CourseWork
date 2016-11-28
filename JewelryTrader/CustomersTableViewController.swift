@@ -10,7 +10,10 @@ import UIKit
 import CoreData
 
 class CustomersTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-
+    
+    typealias Select = (Customer?) -> ()
+    var didSelect: Select?
+    
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("Customer", keyForSort: "fullName")
     
     override func viewDidLoad() {
@@ -44,7 +47,12 @@ class CustomersTableViewController: UITableViewController, NSFetchedResultsContr
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let customer = fetchedResultsController.objectAtIndexPath(indexPath) as? Customer
-        performSegueWithIdentifier("customersToCustomer", sender: customer)
+        if let dSelect = self.didSelect {
+            dSelect(customer)
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            performSegueWithIdentifier("customersToCustomer", sender: customer)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

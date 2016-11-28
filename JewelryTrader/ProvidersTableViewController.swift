@@ -11,6 +11,9 @@ import CoreData
 
 class ProvidersTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    typealias Select = (Provider?) -> ()
+    var didSelect: Select?
+    
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("Provider", keyForSort: "name")
     
     override func viewDidLoad() {
@@ -44,7 +47,12 @@ class ProvidersTableViewController: UITableViewController, NSFetchedResultsContr
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let provider = fetchedResultsController.objectAtIndexPath(indexPath) as? Provider
-        performSegueWithIdentifier("providersToProvider", sender: provider)
+        if let dSelect = self.didSelect {
+            dSelect(provider)
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            performSegueWithIdentifier("providersToProvider", sender: provider)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

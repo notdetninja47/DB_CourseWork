@@ -10,6 +10,9 @@ import UIKit
 import CoreData
 
 class ProductTypesTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    typealias Select = (ProductType?) -> ()
+    var didSelect: Select?
 
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("ProductType", keyForSort: "name")
     
@@ -44,7 +47,13 @@ class ProductTypesTableViewController: UITableViewController, NSFetchedResultsCo
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let productType = fetchedResultsController.objectAtIndexPath(indexPath) as? ProductType
-        performSegueWithIdentifier("productTypesToProductType", sender: productType)
+        
+        if let dSelect = self.didSelect {
+            dSelect(productType)
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            performSegueWithIdentifier("productTypesToProductType", sender: productType)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

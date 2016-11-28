@@ -11,6 +11,9 @@ import CoreData
 
 class ColorTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    typealias Select = (Color?) -> ()
+    var didSelect: Select?
+    
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("Color", keyForSort: "name")
     
     override func viewDidLoad() {
@@ -44,7 +47,12 @@ class ColorTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let color = fetchedResultsController.objectAtIndexPath(indexPath) as? Color
-        performSegueWithIdentifier("colorsToColor", sender: color)
+        if let dSelect = self.didSelect {
+            dSelect(color)
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            performSegueWithIdentifier("colorsToColor", sender: color)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

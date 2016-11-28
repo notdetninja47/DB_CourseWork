@@ -18,6 +18,6 @@ extension Sale {
     @NSManaged var date: NSTimeInterval
     @NSManaged var profit: Float
     @NSManaged var customer: Customer?
-    @NSManaged var products: NSSet?
+    @NSManaged var product: Product?
 
 }
