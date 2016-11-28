@@ -15,6 +15,7 @@ import CoreData
 extension MetalType {
 
     @NSManaged var name: String?
+    @NSManaged var currentPrice: Float
     @NSManaged var products: NSSet?
 
 }

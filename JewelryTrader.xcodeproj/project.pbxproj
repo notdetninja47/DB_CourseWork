@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1311DFA1DEBEF0D00ECAB4B /* MetalContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */; };
+		B1311DFB1DEBEF0D00ECAB4B /* MetalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */; };
+		B1311E011DEBF2A500ECAB4B /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */; };
+		B1311E021DEBF2A500ECAB4B /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DFE1DEBF2A500ECAB4B /* ColorViewController.swift */; };
+		B1311E091DEBF4C100ECAB4B /* InsertionTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E071DEBF4C100ECAB4B /* InsertionTypeTableViewController.swift */; };
+		B1311E0A1DEBF4C100ECAB4B /* InsertionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E081DEBF4C100ECAB4B /* InsertionTypeViewController.swift */; };
+		B1311E171DEBF83E00ECAB4B /* ProvidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E151DEBF83E00ECAB4B /* ProvidersTableViewController.swift */; };
+		B1311E181DEBF83E00ECAB4B /* ProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E161DEBF83E00ECAB4B /* ProviderViewController.swift */; };
+		B1311E1B1DEBFCEB00ECAB4B /* CustomersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E191DEBFCEB00ECAB4B /* CustomersTableViewController.swift */; };
+		B1311E1C1DEBFCEB00ECAB4B /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E1A1DEBFCEB00ECAB4B /* CustomerViewController.swift */; };
 		B197D59F1DEBCD660067F866 /* ProductType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5891DEBCD660067F866 /* ProductType+CoreDataProperties.swift */; };
 		B197D5A01DEBCD660067F866 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D58A1DEBCD660067F866 /* ProductType.swift */; };
 		B197D5A11DEBCD660067F866 /* MetalContent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D58B1DEBCD660067F866 /* MetalContent+CoreDataProperties.swift */; };
@@ -30,15 +40,29 @@
 		B197D5B31DEBCD660067F866 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59D1DEBCD660067F866 /* Product+CoreDataProperties.swift */; };
 		B197D5B41DEBCD660067F866 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59E1DEBCD660067F866 /* Product.swift */; };
 		B197D5BA1DEBCF910067F866 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5B91DEBCF910067F866 /* CoreDataManager.swift */; };
+		B1A832131DEBDA5F00EC8080 /* ProductTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */; };
+		B1A832151DEBDDF500EC8080 /* ProductTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */; };
 		B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */; };
 		B1EA31981DEBCB9400E8FDC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31971DEBCB9400E8FDC2 /* ViewController.swift */; };
 		B1EA319B1DEBCB9400E8FDC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EA31991DEBCB9400E8FDC2 /* Main.storyboard */; };
 		B1EA319E1DEBCB9400E8FDC2 /* JewelryTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1EA319C1DEBCB9400E8FDC2 /* JewelryTrader.xcdatamodeld */; };
 		B1EA31A01DEBCB9400E8FDC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1EA319F1DEBCB9400E8FDC2 /* Assets.xcassets */; };
 		B1EA31A31DEBCB9400E8FDC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EA31A11DEBCB9400E8FDC2 /* LaunchScreen.storyboard */; };
+		B1EF1A821DEBEA9B009CBFD2 /* MetalTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF1A801DEBEA9B009CBFD2 /* MetalTypeTableViewController.swift */; };
+		B1EF1A831DEBEA9B009CBFD2 /* MetalTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF1A811DEBEA9B009CBFD2 /* MetalTypeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentTableViewController.swift; sourceTree = "<group>"; };
+		B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentViewController.swift; sourceTree = "<group>"; };
+		B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
+		B1311DFE1DEBF2A500ECAB4B /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		B1311E071DEBF4C100ECAB4B /* InsertionTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionTypeTableViewController.swift; sourceTree = "<group>"; };
+		B1311E081DEBF4C100ECAB4B /* InsertionTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionTypeViewController.swift; sourceTree = "<group>"; };
+		B1311E151DEBF83E00ECAB4B /* ProvidersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvidersTableViewController.swift; sourceTree = "<group>"; };
+		B1311E161DEBF83E00ECAB4B /* ProviderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderViewController.swift; sourceTree = "<group>"; };
+		B1311E191DEBFCEB00ECAB4B /* CustomersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersTableViewController.swift; sourceTree = "<group>"; };
+		B1311E1A1DEBFCEB00ECAB4B /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
 		B197D5891DEBCD660067F866 /* ProductType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProductType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B197D58A1DEBCD660067F866 /* ProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		B197D58B1DEBCD660067F866 /* MetalContent+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MetalContent+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -62,6 +86,8 @@
 		B197D59D1DEBCD660067F866 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B197D59E1DEBCD660067F866 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B197D5B91DEBCF910067F866 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypesTableViewController.swift; sourceTree = "<group>"; };
+		B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypeViewController.swift; sourceTree = "<group>"; };
 		B1EA31921DEBCB9400E8FDC2 /* JewelryTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelryTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1EA31971DEBCB9400E8FDC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +96,8 @@
 		B1EA319F1DEBCB9400E8FDC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1EA31A21DEBCB9400E8FDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1EA31A41DEBCB9400E8FDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1EF1A801DEBEA9B009CBFD2 /* MetalTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTypeTableViewController.swift; sourceTree = "<group>"; };
+		B1EF1A811DEBEA9B009CBFD2 /* MetalTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTypeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +111,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1311DFC1DEBEF1000ECAB4B /* MetalContent */ = {
+			isa = PBXGroup;
+			children = (
+				B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */,
+				B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */,
+			);
+			name = MetalContent;
+			sourceTree = "<group>";
+		};
+		B1311E051DEBF2B700ECAB4B /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */,
+				B1311DFE1DEBF2A500ECAB4B /* ColorViewController.swift */,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
+		B1311E061DEBF2BE00ECAB4B /* InsertionType */ = {
+			isa = PBXGroup;
+			children = (
+				B1311E071DEBF4C100ECAB4B /* InsertionTypeTableViewController.swift */,
+				B1311E081DEBF4C100ECAB4B /* InsertionTypeViewController.swift */,
+			);
+			name = InsertionType;
+			sourceTree = "<group>";
+		};
+		B1311E0B1DEBF78D00ECAB4B /* Warehouse */ = {
+			isa = PBXGroup;
+			children = (
+				B1311E0F1DEBF7CE00ECAB4B /* Providers */,
+				B1311E0E1DEBF7C100ECAB4B /* Products */,
+			);
+			name = Warehouse;
+			sourceTree = "<group>";
+		};
+		B1311E0D1DEBF7AA00ECAB4B /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		B1311E0E1DEBF7C100ECAB4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1311E0F1DEBF7CE00ECAB4B /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				B1311E151DEBF83E00ECAB4B /* ProvidersTableViewController.swift */,
+				B1311E161DEBF83E00ECAB4B /* ProviderViewController.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		B1311E121DEBF7EB00ECAB4B /* Sells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sells;
+			sourceTree = "<group>";
+		};
+		B1311E131DEBF7F300ECAB4B /* Customers */ = {
+			isa = PBXGroup;
+			children = (
+				B1311E191DEBFCEB00ECAB4B /* CustomersTableViewController.swift */,
+				B1311E1A1DEBFCEB00ECAB4B /* CustomerViewController.swift */,
+			);
+			name = Customers;
+			sourceTree = "<group>";
+		};
+		B1311E141DEBF7FA00ECAB4B /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				B1311E131DEBF7F300ECAB4B /* Customers */,
+				B1311E121DEBF7EB00ECAB4B /* Sells */,
+			);
+			name = Shop;
+			sourceTree = "<group>";
+		};
 		B197D5B51DEBCD790067F866 /* Model + Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +276,50 @@
 				B197D5B71DEBCD9E0067F866 /* Supporting files */,
 				B1EA31971DEBCB9400E8FDC2 /* ViewController.swift */,
 				B1EA31991DEBCB9400E8FDC2 /* Main.storyboard */,
+				B1EF1A7F1DEBE9C5009CBFD2 /* Presentation */,
 			);
 			path = JewelryTrader;
+			sourceTree = "<group>";
+		};
+		B1EF1A7D1DEBE9B4009CBFD2 /* ProductType */ = {
+			isa = PBXGroup;
+			children = (
+				B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */,
+				B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */,
+			);
+			name = ProductType;
+			sourceTree = "<group>";
+		};
+		B1EF1A7E1DEBE9BF009CBFD2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B1311E051DEBF2B700ECAB4B /* Color */,
+				B1311E061DEBF2BE00ECAB4B /* InsertionType */,
+				B1311DFC1DEBEF1000ECAB4B /* MetalContent */,
+				B1EF1A841DEBEAA0009CBFD2 /* MetalType */,
+				B1EF1A7D1DEBE9B4009CBFD2 /* ProductType */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		B1EF1A7F1DEBE9C5009CBFD2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B1311E0B1DEBF78D00ECAB4B /* Warehouse */,
+				B1311E141DEBF7FA00ECAB4B /* Shop */,
+				B1311E0D1DEBF7AA00ECAB4B /* Statistics */,
+				B1EF1A7E1DEBE9BF009CBFD2 /* Settings */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		B1EF1A841DEBEAA0009CBFD2 /* MetalType */ = {
+			isa = PBXGroup;
+			children = (
+				B1EF1A801DEBEA9B009CBFD2 /* MetalTypeTableViewController.swift */,
+				B1EF1A811DEBEA9B009CBFD2 /* MetalTypeViewController.swift */,
+			);
+			name = MetalType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,29 +393,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1311E0A1DEBF4C100ECAB4B /* InsertionTypeViewController.swift in Sources */,
 				B197D5B01DEBCD660067F866 /* Photo.swift in Sources */,
 				B197D5B11DEBCD660067F866 /* Customer+CoreDataProperties.swift in Sources */,
+				B1EF1A831DEBEA9B009CBFD2 /* MetalTypeViewController.swift in Sources */,
 				B197D5A71DEBCD660067F866 /* Sale+CoreDataProperties.swift in Sources */,
 				B197D5AA1DEBCD660067F866 /* Insertion.swift in Sources */,
+				B1311E1B1DEBFCEB00ECAB4B /* CustomersTableViewController.swift in Sources */,
+				B1EF1A821DEBEA9B009CBFD2 /* MetalTypeTableViewController.swift in Sources */,
 				B197D5AC1DEBCD660067F866 /* InsertionType.swift in Sources */,
 				B197D5B21DEBCD660067F866 /* Customer.swift in Sources */,
 				B197D5A21DEBCD660067F866 /* MetalContent.swift in Sources */,
 				B197D5B41DEBCD660067F866 /* Product.swift in Sources */,
+				B1311E181DEBF83E00ECAB4B /* ProviderViewController.swift in Sources */,
 				B197D5A81DEBCD660067F866 /* Sale.swift in Sources */,
 				B197D5A01DEBCD660067F866 /* ProductType.swift in Sources */,
 				B197D5A61DEBCD660067F866 /* Color.swift in Sources */,
 				B1EA31981DEBCB9400E8FDC2 /* ViewController.swift in Sources */,
 				B197D5A51DEBCD660067F866 /* Color+CoreDataProperties.swift in Sources */,
+				B1311DFA1DEBEF0D00ECAB4B /* MetalContentTableViewController.swift in Sources */,
+				B1311DFB1DEBEF0D00ECAB4B /* MetalContentViewController.swift in Sources */,
+				B1A832131DEBDA5F00EC8080 /* ProductTypesTableViewController.swift in Sources */,
 				B197D59F1DEBCD660067F866 /* ProductType+CoreDataProperties.swift in Sources */,
 				B197D5AB1DEBCD660067F866 /* InsertionType+CoreDataProperties.swift in Sources */,
+				B1311E091DEBF4C100ECAB4B /* InsertionTypeTableViewController.swift in Sources */,
+				B1311E011DEBF2A500ECAB4B /* ColorTableViewController.swift in Sources */,
+				B1A832151DEBDDF500EC8080 /* ProductTypeViewController.swift in Sources */,
+				B1311E171DEBF83E00ECAB4B /* ProvidersTableViewController.swift in Sources */,
 				B197D5B31DEBCD660067F866 /* Product+CoreDataProperties.swift in Sources */,
 				B197D5A41DEBCD660067F866 /* Provider.swift in Sources */,
 				B197D5AE1DEBCD660067F866 /* MetalType.swift in Sources */,
 				B1EA319E1DEBCB9400E8FDC2 /* JewelryTrader.xcdatamodeld in Sources */,
 				B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */,
+				B1311E1C1DEBFCEB00ECAB4B /* CustomerViewController.swift in Sources */,
 				B197D5BA1DEBCF910067F866 /* CoreDataManager.swift in Sources */,
 				B197D5A31DEBCD660067F866 /* Provider+CoreDataProperties.swift in Sources */,
 				B197D5AD1DEBCD660067F866 /* MetalType+CoreDataProperties.swift in Sources */,
+				B1311E021DEBF2A500ECAB4B /* ColorViewController.swift in Sources */,
 				B197D5A11DEBCD660067F866 /* MetalContent+CoreDataProperties.swift in Sources */,
 				B197D5AF1DEBCD660067F866 /* Photo+CoreDataProperties.swift in Sources */,
 				B197D5A91DEBCD660067F866 /* Insertion+CoreDataProperties.swift in Sources */,
