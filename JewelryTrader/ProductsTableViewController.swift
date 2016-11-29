@@ -13,17 +13,23 @@ class ProductsTableViewController: UITableViewController, NSFetchedResultsContro
     
     typealias Select = (Product?) -> ()
     var didSelect: Select?
+    var productFilterState:ProductFilter? {
+        didSet{
+            fetchedResultsController = productFilterState!.fetchedResultsController
+            fetchedResultsController.delegate = self
+            do {
+                try fetchedResultsController.performFetch()
+            } catch {
+                print(error)
+            }
+            tableView.reloadData()
+        }
+    }
+    var fetchedResultsController:NSFetchedResultsController = NSFetchedResultsController()
     
-    //var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("Product", keyForSort: "sku")
-    var fetchedResultsController = Product.getAvailableProducts()
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchedResultsController.delegate = self
-        do {
-            try fetchedResultsController.performFetch()
-        } catch {
-            print(error)
-        }
+        productFilterState = ProductFilter()
     }
     
     // MARK: - Table View Data Source
@@ -45,6 +51,9 @@ class ProductsTableViewController: UITableViewController, NSFetchedResultsContro
     @IBAction func AddProduct(sender: UIBarButtonItem) {
         performSegueWithIdentifier("productsToProduct", sender: nil)
     }
+    @IBAction func ShowFilter(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("showFilter", sender: nil)
+    }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let product = fetchedResultsController.objectAtIndexPath(indexPath) as? Product
         if let dSelect = self.didSelect {
@@ -57,8 +66,13 @@ class ProductsTableViewController: UITableViewController, NSFetchedResultsContro
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "productsToProduct" {
+            productFilterState = ProductFilter()
             let controller = segue.destinationViewController as! ProductViewController
             controller.entity = sender as? Product
+        }
+        if segue.identifier == "showFilter" {
+            let controller = segue.destinationViewController as! ProductFilterViewController
+            controller.productsTable = self
         }
     }
     

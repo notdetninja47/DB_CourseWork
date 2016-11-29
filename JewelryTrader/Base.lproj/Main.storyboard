@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Главное меню-->
@@ -16,15 +17,15 @@
                         <sections>
                             <tableViewSection headerTitle="Склад" id="NAi-CO-YhP" userLabel="Склад">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" textLabel="Bqr-LY-RjQ" style="IBUITableViewCellStyleDefault" id="Ksw-rp-gOU" userLabel="Изделия">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Bqr-LY-RjQ" style="IBUITableViewCellStyleDefault" id="Ksw-rp-gOU" userLabel="Изделия">
                                         <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ksw-rp-gOU" id="QkL-xN-HYM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Изделия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bqr-LY-RjQ">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,7 +34,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="MX0-Ub-TpI" kind="showDetail" id="rSa-zy-PHX"/>
+                                            <segue destination="MX0-Ub-TpI" kind="showDetail" id="uCz-9d-azH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" textLabel="f98-MQ-4v3" style="IBUITableViewCellStyleDefault" id="B9T-pM-KAn" userLabel="Поставщики">
@@ -271,7 +272,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFy-eS-P8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="1"/>
+            <point key="canvasLocation" x="2598" y="-1213"/>
         </scene>
         <!--Категории-->
         <scene sceneID="5Tz-V5-Aek">
@@ -1269,6 +1270,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Изделия" id="ieG-VS-57e">
+                        <barButtonItem key="leftBarButtonItem" title="Выборка" id="WFf-LQ-Zfh">
+                            <connections>
+                                <action selector="ShowFilter:" destination="X0S-gz-MLT" id="Lib-Tw-GCb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Добавить" id="B9B-ea-MT2">
                             <connections>
                                 <action selector="AddProduct:" destination="X0S-gz-MLT" id="g6Y-Og-rKI"/>
@@ -1277,11 +1283,14 @@
                     </navigationItem>
                     <connections>
                         <segue destination="f6x-nx-9oI" kind="presentation" identifier="productsToProduct" modalPresentationStyle="currentContext" id="OhF-Cx-h7A"/>
+                        <segue destination="P6N-R2-qyj" kind="popoverPresentation" identifier="showFilter" popoverAnchorBarButtonItem="WFf-LQ-Zfh" id="RhN-s9-6Xp">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyD-MA-I8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5536" y="-1877"/>
+            <point key="canvasLocation" x="6348" y="-1877"/>
         </scene>
         <!--Изделие-->
         <scene sceneID="YlC-Z8-olw">
@@ -1573,35 +1582,394 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2r-Yp-e9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6498" y="-1877"/>
+            <point key="canvasLocation" x="7310" y="-1877"/>
         </scene>
         <!--Фильтр изделий-->
         <scene sceneID="CrZ-JI-n2K">
             <objects>
-                <tableViewController title="Фильтр изделий" id="P6N-R2-qyj" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ibj-js-LYO">
+                <tableViewController title="Фильтр изделий" id="P6N-R2-qyj" customClass="ProductFilterViewController" customModule="JewelryTrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ibj-js-LYO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="y1J-BX-EVr">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y1J-BX-EVr" id="fPh-zd-kOl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bXQ-1F-4zl">
+                            <rect key="frame" x="0.0" y="555.5" width="600" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Применить"/>
+                            <connections>
+                                <action selector="applyChanges:" destination="P6N-R2-qyj" eventType="touchUpInside" id="XEs-gE-e7t"/>
+                            </connections>
+                        </button>
+                        <sections>
+                            <tableViewSection headerTitle="Поиск" id="UV5-A4-tYB" userLabel="Поиск">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="y1J-BX-EVr">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y1J-BX-EVr" id="fPh-zd-kOl">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="haN-2y-jeR">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="haN-2y-jeR" secondAttribute="bottom" constant="-1.5" id="6DY-B9-cMa"/>
+                                                <constraint firstItem="haN-2y-jeR" firstAttribute="leading" secondItem="fPh-zd-kOl" secondAttribute="leadingMargin" id="Tao-OE-j5W"/>
+                                                <constraint firstItem="haN-2y-jeR" firstAttribute="trailing" secondItem="fPh-zd-kOl" secondAttribute="trailingMargin" id="c31-0l-f6Q"/>
+                                                <constraint firstItem="haN-2y-jeR" firstAttribute="top" secondItem="fPh-zd-kOl" secondAttribute="topMargin" constant="-1" id="rdh-2H-MME"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="7cM-9S-0dp">
+                                        <rect key="frame" x="0.0" y="93.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7cM-9S-0dp" id="4Zo-o7-loT">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Минимальная цена" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cC7-5I-suP">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cC7-5I-suP" firstAttribute="trailing" secondItem="4Zo-o7-loT" secondAttribute="trailingMargin" id="D14-ck-iCs"/>
+                                                <constraint firstItem="cC7-5I-suP" firstAttribute="leading" secondItem="4Zo-o7-loT" secondAttribute="leadingMargin" id="HOx-6W-fio"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cC7-5I-suP" secondAttribute="bottom" constant="-1.5" id="Rlb-Xm-o8S"/>
+                                                <constraint firstItem="cC7-5I-suP" firstAttribute="top" secondItem="4Zo-o7-loT" secondAttribute="topMargin" constant="-1" id="YdY-gD-lk8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="xqf-R0-Iob">
+                                        <rect key="frame" x="0.0" y="137.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xqf-R0-Iob" id="aRM-xW-3Ah">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Максимальная цена" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHR-6R-XxX">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UHR-6R-XxX" secondAttribute="bottom" constant="-1.5" id="5QX-KY-oxz"/>
+                                                <constraint firstItem="UHR-6R-XxX" firstAttribute="leading" secondItem="aRM-xW-3Ah" secondAttribute="leadingMargin" id="73t-JL-otk"/>
+                                                <constraint firstItem="UHR-6R-XxX" firstAttribute="trailing" secondItem="aRM-xW-3Ah" secondAttribute="trailingMargin" id="msT-cT-fAf"/>
+                                                <constraint firstItem="UHR-6R-XxX" firstAttribute="top" secondItem="aRM-xW-3Ah" secondAttribute="topMargin" constant="-1" id="qT3-Ro-CSe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Сортировка" id="3ug-9i-8ym" userLabel="Сортировка">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="YYn-Gp-ZNe">
+                                        <rect key="frame" x="0.0" y="231.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YYn-Gp-ZNe" id="zLs-Uh-LDN">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5S4-iu-5ns">
+                                                    <rect key="frame" x="8" y="5" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="changeSorting:" destination="P6N-R2-qyj" eventType="editingDidEnd" id="Owg-CY-mIO"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="top" secondItem="zLs-Uh-LDN" secondAttribute="topMargin" constant="-3" id="32g-TM-wHc"/>
+                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="leading" secondItem="zLs-Uh-LDN" secondAttribute="leadingMargin" id="5XB-Ms-koJ"/>
+                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="top" secondItem="zLs-Uh-LDN" secondAttribute="topMargin" constant="-1" id="A5r-Nl-4Fp"/>
+                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="trailing" secondItem="zLs-Uh-LDN" secondAttribute="trailingMargin" id="DlG-4x-3Nb"/>
+                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="leading" secondItem="zLs-Uh-LDN" secondAttribute="leadingMargin" id="ISs-f1-Cp7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5S4-iu-5ns" secondAttribute="bottom" constant="0.5" id="UKj-db-K5e"/>
+                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="leading" secondItem="zLs-Uh-LDN" secondAttribute="leadingMargin" id="Zvf-ht-PFG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5S4-iu-5ns" secondAttribute="bottom" constant="0.5" id="cQf-nT-Zs4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5S4-iu-5ns" secondAttribute="bottom" constant="-1.5" id="kSI-Zf-DgQ"/>
+                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="top" secondItem="zLs-Uh-LDN" secondAttribute="topMargin" constant="-3" id="nH7-B0-z3T"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="32g-TM-wHc"/>
+                                                    <exclude reference="5XB-Ms-koJ"/>
+                                                    <exclude reference="A5r-Nl-4Fp"/>
+                                                    <exclude reference="ISs-f1-Cp7"/>
+                                                    <exclude reference="UKj-db-K5e"/>
+                                                    <exclude reference="kSI-Zf-DgQ"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Фильтр" id="39a-jS-DEX" userLabel="Фильтр">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="NEE-Uh-VdS">
+                                        <rect key="frame" x="0.0" y="325.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NEE-Uh-VdS" id="JKJ-0t-WvY">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juh-1I-x8Z">
+                                                    <rect key="frame" x="513" y="5" width="70" height="30"/>
+                                                    <state key="normal" title="Сбросить"/>
+                                                    <connections>
+                                                        <action selector="clearProductType:" destination="P6N-R2-qyj" eventType="touchUpInside" id="aol-9d-4Kp"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Категория" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPY-1G-36M">
+                                                    <rect key="frame" x="8" y="5" width="428" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Eb-Tf-uXD">
+                                                    <rect key="frame" x="444" y="5" width="61" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
+                                                    <connections>
+                                                        <action selector="selectProductType:" destination="P6N-R2-qyj" eventType="touchUpInside" id="C9G-q0-eyb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4Eb-Tf-uXD" secondAttribute="bottom" constant="-1.5" id="5ca-oC-raw"/>
+                                                <constraint firstItem="Juh-1I-x8Z" firstAttribute="leading" secondItem="4Eb-Tf-uXD" secondAttribute="trailing" constant="8" id="7wf-sZ-SCe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4Eb-Tf-uXD" secondAttribute="bottom" constant="0.5" id="9YY-yZ-Hlu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bPY-1G-36M" secondAttribute="bottom" constant="0.5" id="CxP-iq-eM0"/>
+                                                <constraint firstItem="Juh-1I-x8Z" firstAttribute="top" secondItem="JKJ-0t-WvY" secondAttribute="topMargin" constant="-3" id="KcS-hR-pzZ"/>
+                                                <constraint firstItem="bPY-1G-36M" firstAttribute="leading" secondItem="JKJ-0t-WvY" secondAttribute="leadingMargin" id="LNi-cK-LvF"/>
+                                                <constraint firstItem="bPY-1G-36M" firstAttribute="top" secondItem="JKJ-0t-WvY" secondAttribute="topMargin" constant="-3" id="Mw2-D4-6WN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Juh-1I-x8Z" secondAttribute="trailing" constant="9" id="NlH-O6-Dqh"/>
+                                                <constraint firstItem="bPY-1G-36M" firstAttribute="leading" secondItem="JKJ-0t-WvY" secondAttribute="leadingMargin" id="PGl-o8-4KH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Juh-1I-x8Z" secondAttribute="bottom" constant="0.5" id="c0q-3j-SpO"/>
+                                                <constraint firstItem="4Eb-Tf-uXD" firstAttribute="leading" secondItem="bPY-1G-36M" secondAttribute="trailing" constant="8" id="ddb-gz-sgY"/>
+                                                <constraint firstItem="4Eb-Tf-uXD" firstAttribute="top" secondItem="JKJ-0t-WvY" secondAttribute="topMargin" constant="-3" id="g1X-rG-Y09"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bPY-1G-36M" secondAttribute="bottom" constant="-1.5" id="gRi-We-gQg"/>
+                                                <constraint firstItem="4Eb-Tf-uXD" firstAttribute="leading" secondItem="bPY-1G-36M" secondAttribute="trailing" constant="8" id="j9D-Xo-IyQ"/>
+                                                <constraint firstItem="4Eb-Tf-uXD" firstAttribute="trailing" secondItem="JKJ-0t-WvY" secondAttribute="trailingMargin" id="nft-Lh-2lO"/>
+                                                <constraint firstItem="4Eb-Tf-uXD" firstAttribute="top" secondItem="JKJ-0t-WvY" secondAttribute="topMargin" constant="-1" id="pg7-28-Pda"/>
+                                                <constraint firstItem="bPY-1G-36M" firstAttribute="top" secondItem="JKJ-0t-WvY" secondAttribute="topMargin" constant="-1" id="vef-vg-8qt"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="LNi-cK-LvF"/>
+                                                    <exclude reference="gRi-We-gQg"/>
+                                                    <exclude reference="vef-vg-8qt"/>
+                                                    <exclude reference="5ca-oC-raw"/>
+                                                    <exclude reference="ddb-gz-sgY"/>
+                                                    <exclude reference="nft-Lh-2lO"/>
+                                                    <exclude reference="pg7-28-Pda"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="I4N-QJ-UXZ">
+                                        <rect key="frame" x="0.0" y="369.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I4N-QJ-UXZ" id="M5E-Gr-qLN">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Металл" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NdX-ki-rUm">
+                                                    <rect key="frame" x="8" y="5" width="428" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4B-4H-tw7">
+                                                    <rect key="frame" x="513" y="5" width="70" height="30"/>
+                                                    <state key="normal" title="Сбросить"/>
+                                                    <connections>
+                                                        <action selector="clearMetalType:" destination="P6N-R2-qyj" eventType="touchUpInside" id="iO4-sI-0WS"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jm7-ct-o6F">
+                                                    <rect key="frame" x="444" y="5" width="61" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
+                                                    <connections>
+                                                        <action selector="selectMetalType:" destination="P6N-R2-qyj" eventType="touchUpInside" id="Oki-pi-Yay"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Jm7-ct-o6F" secondAttribute="bottom" constant="0.5" id="2Uj-zG-bfC"/>
+                                                <constraint firstItem="NdX-ki-rUm" firstAttribute="leading" secondItem="M5E-Gr-qLN" secondAttribute="leadingMargin" id="2dv-Yd-i0z"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NdX-ki-rUm" secondAttribute="bottom" constant="-1.5" id="3Gk-hL-xjg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="H4B-4H-tw7" secondAttribute="bottom" constant="0.5" id="9bh-cW-Faz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="H4B-4H-tw7" secondAttribute="trailing" constant="9" id="HvS-xw-djt"/>
+                                                <constraint firstItem="NdX-ki-rUm" firstAttribute="leading" secondItem="M5E-Gr-qLN" secondAttribute="leadingMargin" id="J6l-N1-R5n"/>
+                                                <constraint firstItem="Jm7-ct-o6F" firstAttribute="leading" secondItem="NdX-ki-rUm" secondAttribute="trailing" constant="8" id="LNg-0v-h7e"/>
+                                                <constraint firstItem="NdX-ki-rUm" firstAttribute="top" secondItem="M5E-Gr-qLN" secondAttribute="topMargin" constant="-3" id="Tpv-LQ-vYk"/>
+                                                <constraint firstItem="H4B-4H-tw7" firstAttribute="top" secondItem="M5E-Gr-qLN" secondAttribute="topMargin" constant="-3" id="UCm-VM-xhV"/>
+                                                <constraint firstItem="Jm7-ct-o6F" firstAttribute="top" secondItem="M5E-Gr-qLN" secondAttribute="topMargin" constant="-1" id="WUI-Aa-vOZ"/>
+                                                <constraint firstItem="Jm7-ct-o6F" firstAttribute="trailing" secondItem="M5E-Gr-qLN" secondAttribute="trailingMargin" id="aW8-3u-1s7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Jm7-ct-o6F" secondAttribute="bottom" constant="-1.5" id="dvI-5P-Jaz"/>
+                                                <constraint firstItem="Jm7-ct-o6F" firstAttribute="top" secondItem="M5E-Gr-qLN" secondAttribute="topMargin" constant="-3" id="pP0-R9-veK"/>
+                                                <constraint firstItem="H4B-4H-tw7" firstAttribute="leading" secondItem="Jm7-ct-o6F" secondAttribute="trailing" constant="8" id="rEi-Eg-9cT"/>
+                                                <constraint firstItem="NdX-ki-rUm" firstAttribute="top" secondItem="M5E-Gr-qLN" secondAttribute="topMargin" constant="-1" id="wEW-z9-dDS"/>
+                                                <constraint firstItem="Jm7-ct-o6F" firstAttribute="leading" secondItem="NdX-ki-rUm" secondAttribute="trailing" constant="8" id="xH9-AT-1H2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NdX-ki-rUm" secondAttribute="bottom" constant="0.5" id="yVJ-dI-YkW"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="J6l-N1-R5n"/>
+                                                    <exclude reference="3Gk-hL-xjg"/>
+                                                    <exclude reference="wEW-z9-dDS"/>
+                                                    <exclude reference="dvI-5P-Jaz"/>
+                                                    <exclude reference="LNg-0v-h7e"/>
+                                                    <exclude reference="aW8-3u-1s7"/>
+                                                    <exclude reference="WUI-Aa-vOZ"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="kv8-eb-NzJ">
+                                        <rect key="frame" x="0.0" y="413.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kv8-eb-NzJ" id="P6d-6s-LTA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snH-68-Rmv">
+                                                    <rect key="frame" x="444" y="5" width="61" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
+                                                    <connections>
+                                                        <action selector="selectColor:" destination="P6N-R2-qyj" eventType="touchUpInside" id="bT4-nb-CRJ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSb-oo-QCh">
+                                                    <rect key="frame" x="513" y="5" width="70" height="30"/>
+                                                    <state key="normal" title="Сбросить"/>
+                                                    <connections>
+                                                        <action selector="clearColor:" destination="P6N-R2-qyj" eventType="touchUpInside" id="vYY-G9-h6E"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Цвет" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSi-e7-4uj">
+                                                    <rect key="frame" x="8" y="5" width="428" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vSi-e7-4uj" secondAttribute="bottom" constant="-1.5" id="2X1-DX-azf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NSb-oo-QCh" secondAttribute="trailing" constant="9" id="2f6-xS-vsl"/>
+                                                <constraint firstItem="snH-68-Rmv" firstAttribute="leading" secondItem="vSi-e7-4uj" secondAttribute="trailing" constant="8" id="5WO-Ca-czv"/>
+                                                <constraint firstItem="vSi-e7-4uj" firstAttribute="top" secondItem="P6d-6s-LTA" secondAttribute="topMargin" constant="-3" id="6gU-61-dun"/>
+                                                <constraint firstItem="snH-68-Rmv" firstAttribute="top" secondItem="P6d-6s-LTA" secondAttribute="topMargin" constant="-3" id="7kf-Ty-r5I"/>
+                                                <constraint firstItem="snH-68-Rmv" firstAttribute="trailing" secondItem="P6d-6s-LTA" secondAttribute="trailingMargin" id="87k-MZ-5B4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vSi-e7-4uj" secondAttribute="bottom" constant="0.5" id="F3p-8k-GPQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="snH-68-Rmv" secondAttribute="bottom" constant="0.5" id="NV7-Aj-IPq"/>
+                                                <constraint firstItem="NSb-oo-QCh" firstAttribute="leading" secondItem="snH-68-Rmv" secondAttribute="trailing" constant="8" id="TVf-PW-iYC"/>
+                                                <constraint firstItem="vSi-e7-4uj" firstAttribute="leading" secondItem="P6d-6s-LTA" secondAttribute="leadingMargin" id="Tcy-GE-5Y2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="snH-68-Rmv" secondAttribute="bottom" constant="-1.5" id="Yye-wo-vTp"/>
+                                                <constraint firstItem="vSi-e7-4uj" firstAttribute="top" secondItem="P6d-6s-LTA" secondAttribute="topMargin" constant="-1" id="qM3-sz-cqO"/>
+                                                <constraint firstItem="snH-68-Rmv" firstAttribute="leading" secondItem="vSi-e7-4uj" secondAttribute="trailing" constant="8" id="rY0-rt-IyP"/>
+                                                <constraint firstItem="NSb-oo-QCh" firstAttribute="top" secondItem="P6d-6s-LTA" secondAttribute="topMargin" constant="-3" id="s3R-ue-Orj"/>
+                                                <constraint firstItem="snH-68-Rmv" firstAttribute="top" secondItem="P6d-6s-LTA" secondAttribute="topMargin" constant="-1" id="v47-WG-dzE"/>
+                                                <constraint firstItem="vSi-e7-4uj" firstAttribute="leading" secondItem="P6d-6s-LTA" secondAttribute="leadingMargin" id="xUR-uN-Tlf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NSb-oo-QCh" secondAttribute="bottom" constant="0.5" id="xXY-hw-Dvj"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Tcy-GE-5Y2"/>
+                                                    <exclude reference="2X1-DX-azf"/>
+                                                    <exclude reference="qM3-sz-cqO"/>
+                                                    <exclude reference="Yye-wo-vTp"/>
+                                                    <exclude reference="5WO-Ca-czv"/>
+                                                    <exclude reference="87k-MZ-5B4"/>
+                                                    <exclude reference="v47-WG-dzE"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="imj-aY-79F" userLabel="Только в наличии">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="5mk-c5-bps">
+                                        <rect key="frame" x="0.0" y="493.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5mk-c5-bps" id="Lz4-2t-q3O">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Только в наличии" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ak-fk-3Ff">
+                                                    <rect key="frame" x="8" y="11" width="141" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXa-au-gpA">
+                                                    <rect key="frame" x="543" y="5" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Ak-fk-3Ff" firstAttribute="leading" secondItem="Lz4-2t-q3O" secondAttribute="leadingMargin" id="8CX-Ru-G58"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uXa-au-gpA" secondAttribute="bottom" constant="-3.5" id="Caq-K1-q8P"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8Ak-fk-3Ff" secondAttribute="bottom" constant="3.5" id="EH4-Hl-Rz2"/>
+                                                <constraint firstItem="uXa-au-gpA" firstAttribute="trailing" secondItem="Lz4-2t-q3O" secondAttribute="trailingMargin" id="QZl-KX-uy2"/>
+                                                <constraint firstItem="uXa-au-gpA" firstAttribute="leading" secondItem="8Ak-fk-3Ff" secondAttribute="trailing" constant="8" id="XAL-jv-FZK"/>
+                                                <constraint firstItem="uXa-au-gpA" firstAttribute="top" secondItem="Lz4-2t-q3O" secondAttribute="topMargin" id="fbG-dB-QSw"/>
+                                                <constraint firstItem="8Ak-fk-3Ff" firstAttribute="leading" secondItem="Lz4-2t-q3O" secondAttribute="leadingMargin" id="mig-v7-h3R"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8Ak-fk-3Ff" secondAttribute="bottom" constant="3.5" id="o4K-cl-KKI"/>
+                                                <constraint firstItem="8Ak-fk-3Ff" firstAttribute="top" secondItem="Lz4-2t-q3O" secondAttribute="topMargin" constant="3" id="p35-tc-paP"/>
+                                                <constraint firstItem="uXa-au-gpA" firstAttribute="top" secondItem="Lz4-2t-q3O" secondAttribute="topMargin" constant="-3" id="pS3-Bf-Eq2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uXa-au-gpA" secondAttribute="bottom" constant="-0.5" id="qEL-RK-4qm"/>
+                                                <constraint firstItem="8Ak-fk-3Ff" firstAttribute="top" secondItem="Lz4-2t-q3O" secondAttribute="topMargin" constant="3" id="vhs-CD-aav"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="mig-v7-h3R"/>
+                                                    <exclude reference="o4K-cl-KKI"/>
+                                                    <exclude reference="p35-tc-paP"/>
+                                                    <exclude reference="Caq-K1-q8P"/>
+                                                    <exclude reference="XAL-jv-FZK"/>
+                                                    <exclude reference="fbG-dB-QSw"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="P6N-R2-qyj" id="7rH-0p-CBM"/>
                             <outlet property="delegate" destination="P6N-R2-qyj" id="WOE-Fs-rkv"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="DAJ-TT-lad"/>
+                    <connections>
+                        <outlet property="colorTextField" destination="vSi-e7-4uj" id="TxM-DE-7cQ"/>
+                        <outlet property="maxPrice" destination="UHR-6R-XxX" id="LA3-2Y-Ykm"/>
+                        <outlet property="metalTypeTextField" destination="NdX-ki-rUm" id="9Ae-jR-2jJ"/>
+                        <outlet property="minPrice" destination="cC7-5I-suP" id="hM3-Zq-dXU"/>
+                        <outlet property="nameTextField" destination="haN-2y-jeR" id="tID-1Q-6lf"/>
+                        <outlet property="onlyAvailable" destination="uXa-au-gpA" id="s4a-ch-X8K"/>
+                        <outlet property="productTypeTextField" destination="bPY-1G-36M" id="oPY-nK-nMb"/>
+                        <outlet property="sorting" destination="5S4-iu-5ns" id="NgA-iM-U05"/>
+                        <segue destination="mvj-py-nYB" kind="popoverPresentation" identifier="filterToMetalTypes" popoverAnchorView="4Eb-Tf-uXD" id="Nfh-Pn-bpa">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                        <segue destination="Row-fU-xpk" kind="popoverPresentation" identifier="filterToColors" popoverAnchorView="snH-68-Rmv" id="q6H-6y-MKT">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                        <segue destination="n7P-7F-gKu" kind="popoverPresentation" identifier="filterToProductTypes" popoverAnchorView="Jm7-ct-o6F" id="MPK-9I-H9m">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqp-vc-Vrl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4674" y="-2584"/>
+            <point key="canvasLocation" x="6341" y="-2650"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZZW-qw-X0E">
@@ -1619,7 +1987,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLg-u7-bCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4674" y="-1877"/>
+            <point key="canvasLocation" x="5486" y="-1877"/>
         </scene>
         <!--Продажи-->
         <scene sceneID="dfT-mw-0sZ">
@@ -1818,7 +2186,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWV-Av-ANY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8020" y="-1877"/>
+            <point key="canvasLocation" x="8832" y="-1877"/>
         </scene>
         <!--Вставка-->
         <scene sceneID="Z0w-hD-QS8">
@@ -1926,7 +2294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyG-Us-Xbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8886" y="-1877"/>
+            <point key="canvasLocation" x="9698" y="-1877"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QiK-KY-Sf5">
@@ -1944,16 +2312,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfz-4w-mRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7278" y="-1877"/>
+            <point key="canvasLocation" x="8090" y="-1877"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3nf-5K-vbC"/>
-        <segue reference="RlM-Q6-En0"/>
-        <segue reference="e8K-ea-yv6"/>
-        <segue reference="3HI-aQ-fvz"/>
-        <segue reference="x8f-RX-99a"/>
-        <segue reference="vYj-c8-1aG"/>
-        <segue reference="XgC-yH-UZR"/>
+        <segue reference="MPK-9I-H9m"/>
+        <segue reference="uCz-9d-azH"/>
+        <segue reference="JEU-QW-PTD"/>
+        <segue reference="eG9-ES-s1J"/>
+        <segue reference="Bnq-hg-Z2D"/>
+        <segue reference="clY-DW-YwS"/>
+        <segue reference="ZEf-R2-of3"/>
+        <segue reference="P02-o7-SH5"/>
+        <segue reference="q6H-6y-MKT"/>
+        <segue reference="Nfh-Pn-bpa"/>
     </inferredMetricsTieBreakers>
 </document>

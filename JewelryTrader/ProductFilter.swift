@@ -11,32 +11,54 @@ import CoreData
 
 class ProductFilter {
     
-    var fetchRequest:NSFetchRequest
+    var sortKey = "name"
+    var nameSearch: String?
+    var minPrice: Float?
+    var maxPrice: Float?
+    var onlyAvailable = true
+    var metalType:MetalType?
+    var productType:ProductType?
+    var color: Color?
+    
+    var fetchRequest:NSFetchRequest{
+        let result = NSFetchRequest(entityName: "Product")
+        
+        let sortDescriptor = NSSortDescriptor(key: sortKey, ascending: true)
+        result.sortDescriptors = [sortDescriptor]
+        
+        var predicates = [NSPredicate]()
+        if let name = nameSearch {
+            if !name.isEmpty {
+                predicates.append(NSPredicate(format: "%K CONTAINS[cd] %@", "name", name))
+            }
+        }
+        if let minPrice = minPrice {
+            predicates.append(NSPredicate(format: "%K > %@", "price", minPrice))
+        }
+        if let maxPrice = maxPrice {
+            predicates.append(NSPredicate(format: "%K < %@", "price", maxPrice))
+        }
+        if onlyAvailable {
+            predicates.append(NSPredicate(format: "sale = nil"))
+        }
+        if let metal = metalType {
+            predicates.append(NSPredicate(format: "%K == %@", "metalType", metal))
+        }
+        if let type = productType {
+            predicates.append(NSPredicate(format: "%K == %@", "type", type))
+        }
+        if let color = color {
+            predicates.append(NSPredicate(format: "%K <= %@", "color", color))
+        }
+        
+        let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        result.predicate = compoundPredicate
+        
+        return result
+    }
     var fetchedResultsController:NSFetchedResultsController {
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataManager.instance.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
         return fetchedResultsController
-    }
-    
-    
-    init(withSortKey sortKey: String,
-         nameSearchString name: String?,
-         minimumPrice minPrice: Float?,
-         maximumPrice maxPrice: Float?,
-         onlyAvailable available: Bool,
-         metalType metal: MetalType?,
-         productType type: ProductType?,
-         colorType color: Color?) {
-        
-        fetchRequest = NSFetchRequest(entityName: "Product")
-        
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        if let name = name {
-            let predicate = NSPredicate(format: "%K CONTAINS %@", "name", name)
-            fetchRequest.predicate = predicate
-        }
-        
     }
 }
