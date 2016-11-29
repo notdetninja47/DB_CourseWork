@@ -14,7 +14,6 @@
 		B1108E431DECCA5D000FD126 /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1108E421DECCA5D000FD126 /* ProductFilter.swift */; };
 		B12A7A891DECD6800036F2BE /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A881DECD6800036F2BE /* ProductViewController.swift */; };
 		B12A7A8F1DECE43E0036F2BE /* ProductFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A8E1DECE43E0036F2BE /* ProductFilterViewController.swift */; };
-		B12A7A921DECF8900036F2BE /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A911DECF8900036F2BE /* Statistics.swift */; };
 		B1311DFA1DEBEF0D00ECAB4B /* MetalContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */; };
 		B1311DFB1DEBEF0D00ECAB4B /* MetalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */; };
 		B1311E011DEBF2A500ECAB4B /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */; };
@@ -25,6 +24,7 @@
 		B1311E181DEBF83E00ECAB4B /* ProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E161DEBF83E00ECAB4B /* ProviderViewController.swift */; };
 		B1311E1B1DEBFCEB00ECAB4B /* CustomersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E191DEBFCEB00ECAB4B /* CustomersTableViewController.swift */; };
 		B1311E1C1DEBFCEB00ECAB4B /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311E1A1DEBFCEB00ECAB4B /* CustomerViewController.swift */; };
+		B15427221DED54DD00585C14 /* SortableDictionaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15427211DED54DD00585C14 /* SortableDictionaries.swift */; };
 		B197D59F1DEBCD660067F866 /* ProductType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5891DEBCD660067F866 /* ProductType+CoreDataProperties.swift */; };
 		B197D5A01DEBCD660067F866 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D58A1DEBCD660067F866 /* ProductType.swift */; };
 		B197D5A11DEBCD660067F866 /* MetalContent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D58B1DEBCD660067F866 /* MetalContent+CoreDataProperties.swift */; };
@@ -50,6 +50,9 @@
 		B197D5BA1DEBCF910067F866 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5B91DEBCF910067F866 /* CoreDataManager.swift */; };
 		B1A832131DEBDA5F00EC8080 /* ProductTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */; };
 		B1A832151DEBDDF500EC8080 /* ProductTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */; };
+		B1C7757B1DED4AA900153BF3 /* Statistics1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7757A1DED4AA900153BF3 /* Statistics1ViewController.swift */; };
+		B1C7757E1DED4AD900153BF3 /* Statistics2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7757C1DED4AD900153BF3 /* Statistics2ViewController.swift */; };
+		B1C7757F1DED4AD900153BF3 /* Statistics3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7757D1DED4AD900153BF3 /* Statistics3ViewController.swift */; };
 		B1E841B61DEC09C50071B7AC /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E841B41DEC09C50071B7AC /* ProductsTableViewController.swift */; };
 		B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */; };
 		B1EA31981DEBCB9400E8FDC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31971DEBCB9400E8FDC2 /* ViewController.swift */; };
@@ -69,7 +72,6 @@
 		B1108E421DECCA5D000FD126 /* ProductFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
 		B12A7A881DECD6800036F2BE /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		B12A7A8E1DECE43E0036F2BE /* ProductFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilterViewController.swift; sourceTree = "<group>"; };
-		B12A7A911DECF8900036F2BE /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentTableViewController.swift; sourceTree = "<group>"; };
 		B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentViewController.swift; sourceTree = "<group>"; };
 		B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		B1311E161DEBF83E00ECAB4B /* ProviderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderViewController.swift; sourceTree = "<group>"; };
 		B1311E191DEBFCEB00ECAB4B /* CustomersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersTableViewController.swift; sourceTree = "<group>"; };
 		B1311E1A1DEBFCEB00ECAB4B /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		B15427211DED54DD00585C14 /* SortableDictionaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortableDictionaries.swift; sourceTree = "<group>"; };
 		B197D5891DEBCD660067F866 /* ProductType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProductType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B197D58A1DEBCD660067F866 /* ProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		B197D58B1DEBCD660067F866 /* MetalContent+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MetalContent+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -105,6 +108,9 @@
 		B197D5B91DEBCF910067F866 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypesTableViewController.swift; sourceTree = "<group>"; };
 		B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypeViewController.swift; sourceTree = "<group>"; };
+		B1C7757A1DED4AA900153BF3 /* Statistics1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics1ViewController.swift; sourceTree = "<group>"; };
+		B1C7757C1DED4AD900153BF3 /* Statistics2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics2ViewController.swift; sourceTree = "<group>"; };
+		B1C7757D1DED4AD900153BF3 /* Statistics3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics3ViewController.swift; sourceTree = "<group>"; };
 		B1E841B41DEC09C50071B7AC /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		B1EA31921DEBCB9400E8FDC2 /* JewelryTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelryTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,7 +183,10 @@
 		B1311E0D1DEBF7AA00ECAB4B /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				B12A7A911DECF8900036F2BE /* Statistics.swift */,
+				B1C7757A1DED4AA900153BF3 /* Statistics1ViewController.swift */,
+				B1C7757C1DED4AD900153BF3 /* Statistics2ViewController.swift */,
+				B1C7757D1DED4AD900153BF3 /* Statistics3ViewController.swift */,
+				B15427211DED54DD00585C14 /* SortableDictionaries.swift */,
 			);
 			name = Statistics;
 			sourceTree = "<group>";
@@ -389,6 +398,7 @@
 				TargetAttributes = {
 					B1EA31911DEBCB9400E8FDC2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BD5CJ8U5EG;
 					};
 				};
 			};
@@ -431,9 +441,11 @@
 				B1311E0A1DEBF4C100ECAB4B /* InsertionTypeViewController.swift in Sources */,
 				B197D5B01DEBCD660067F866 /* Photo.swift in Sources */,
 				B1108E411DECBFD9000FD126 /* SaleViewController.swift in Sources */,
+				B1C7757B1DED4AA900153BF3 /* Statistics1ViewController.swift in Sources */,
 				B197D5B11DEBCD660067F866 /* Customer+CoreDataProperties.swift in Sources */,
 				B1EF1A831DEBEA9B009CBFD2 /* MetalTypeViewController.swift in Sources */,
 				B197D5A71DEBCD660067F866 /* Sale+CoreDataProperties.swift in Sources */,
+				B15427221DED54DD00585C14 /* SortableDictionaries.swift in Sources */,
 				B12A7A891DECD6800036F2BE /* ProductViewController.swift in Sources */,
 				B197D5AA1DEBCD660067F866 /* Insertion.swift in Sources */,
 				B1311E1B1DEBFCEB00ECAB4B /* CustomersTableViewController.swift in Sources */,
@@ -460,11 +472,12 @@
 				B1311E091DEBF4C100ECAB4B /* InsertionTypeTableViewController.swift in Sources */,
 				B1311E011DEBF2A500ECAB4B /* ColorTableViewController.swift in Sources */,
 				B1A832151DEBDDF500EC8080 /* ProductTypeViewController.swift in Sources */,
-				B12A7A921DECF8900036F2BE /* Statistics.swift in Sources */,
 				B1311E171DEBF83E00ECAB4B /* ProvidersTableViewController.swift in Sources */,
+				B1C7757F1DED4AD900153BF3 /* Statistics3ViewController.swift in Sources */,
 				B197D5B31DEBCD660067F866 /* Product+CoreDataProperties.swift in Sources */,
 				B197D5A41DEBCD660067F866 /* Provider.swift in Sources */,
 				B197D5AE1DEBCD660067F866 /* MetalType.swift in Sources */,
+				B1C7757E1DED4AD900153BF3 /* Statistics2ViewController.swift in Sources */,
 				B1108E401DECBFD9000FD126 /* SalesTableViewController.swift in Sources */,
 				B1EA319E1DEBCB9400E8FDC2 /* JewelryTrader.xcdatamodeld in Sources */,
 				B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */,
@@ -591,7 +604,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JewelryTrader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dos.JewelryTrader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -602,7 +617,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JewelryTrader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dos.JewelryTrader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
