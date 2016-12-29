@@ -43,7 +43,7 @@ class ProductFilter {
             predicates.append(NSPredicate(format: "%K == %@", "type", type))
         }
         if let color = color {
-            predicates.append(NSPredicate(format: "%K <= %@", "color", color))
+            predicates.append(NSPredicate(format: "%K == %@", "color", color))
         }
         
         let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
