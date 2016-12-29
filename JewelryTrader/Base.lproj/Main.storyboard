@@ -18,24 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aeZ-Mu-RrT">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUQ-sm-3pK" customClass="BarChartView" customModule="JewelryTrader" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aeZ-Mu-RrT" firstAttribute="leading" secondItem="gCt-gL-TGA" secondAttribute="leadingMargin" id="0sn-Vf-KAL"/>
-                            <constraint firstItem="aeZ-Mu-RrT" firstAttribute="trailing" secondItem="gCt-gL-TGA" secondAttribute="trailingMargin" id="1DE-VO-BJx"/>
-                            <constraint firstAttribute="bottom" secondItem="aeZ-Mu-RrT" secondAttribute="bottom" constant="20" symbolic="YES" id="MMa-sE-teb"/>
-                            <constraint firstItem="aeZ-Mu-RrT" firstAttribute="top" secondItem="IGb-Ca-IVC" secondAttribute="bottom" id="fr0-1C-0n7"/>
+                            <constraint firstAttribute="trailing" secondItem="fUQ-sm-3pK" secondAttribute="trailing" constant="20" id="OaO-tI-hcP"/>
+                            <constraint firstItem="fUQ-sm-3pK" firstAttribute="leading" secondItem="gCt-gL-TGA" secondAttribute="leading" constant="20" id="OeI-iP-Guc"/>
+                            <constraint firstItem="lBP-wt-sjU" firstAttribute="top" secondItem="fUQ-sm-3pK" secondAttribute="bottom" constant="20" id="jfc-9M-CgG"/>
+                            <constraint firstItem="fUQ-sm-3pK" firstAttribute="top" secondItem="IGb-Ca-IVC" secondAttribute="bottom" constant="20" id="pO3-ES-Sxh"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
-                        <outlet property="output" destination="aeZ-Mu-RrT" id="POR-qz-vt8"/>
+                        <outlet property="barChart" destination="fUQ-sm-3pK" id="U9P-wW-m1E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXA-C3-qqC" userLabel="First Responder" sceneMemberID="firstResponder"/>

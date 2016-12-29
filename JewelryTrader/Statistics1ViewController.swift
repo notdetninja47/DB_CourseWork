@@ -10,7 +10,7 @@ import UIKit
 
 class Statistics1ViewController: UIViewController {
 
-    @IBOutlet weak var output: UITextView!
+    @IBOutlet weak var barChart: BarChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +23,7 @@ class Statistics1ViewController: UIViewController {
                 outputString += "   ->\(month)\n"
             }
         }
-        output.text = outputString
+
     }
 
     func productTypesPopularityPerMonth(basedOnSales sales:[Sale]) -> [Int:[String]]{
