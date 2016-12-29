@@ -15,4 +15,15 @@ class MetalType: NSManagedObject {
     convenience init() {
         self.init(entity: CoreDataManager.instance.entityForName("MetalType"), insertIntoManagedObjectContext: CoreDataManager.instance.managedObjectContext)
     }
+    class func getAllTypes() -> [MetalType] {
+        var results = [MetalType]()
+        
+        let fetchRequest = NSFetchRequest(entityName: "MetalType")
+        do{
+            try results = CoreDataManager.instance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MetalType]
+        }catch{
+            print("FETCH REQUEST ERROR")
+        }
+        return results
+    }
 }

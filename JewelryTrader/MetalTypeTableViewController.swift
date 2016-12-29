@@ -64,9 +64,14 @@ class MetalTypeTableViewController: UITableViewController, NSFetchedResultsContr
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            let managedObject = fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-            CoreDataManager.instance.managedObjectContext.deleteObject(managedObject)
-            CoreDataManager.instance.saveContext()
+            let entity = fetchedResultsController.objectAtIndexPath(indexPath) as! MetalType
+            if entity.products!.count == 0 {
+                let managedObject = fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+                CoreDataManager.instance.managedObjectContext.deleteObject(managedObject)
+                CoreDataManager.instance.saveContext()
+            } else {
+                UIAlertView(title: "Некорректное действие", message: "Вы пытаетесь удалить сущность, которая связанна с другими", delegate: nil, cancelButtonTitle: "Отменить").show()
+            }
         }
     }
     

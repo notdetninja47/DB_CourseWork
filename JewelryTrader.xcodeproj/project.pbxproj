@@ -15,6 +15,20 @@
 		B12A7A891DECD6800036F2BE /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A881DECD6800036F2BE /* ProductViewController.swift */; };
 		B12A7A8F1DECE43E0036F2BE /* ProductFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A8E1DECE43E0036F2BE /* ProductFilterViewController.swift */; };
 		B12A7E2B1E15393A0018EC42 /* Statistics2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E2A1E15393A0018EC42 /* Statistics2ViewController.swift */; };
+		B12A7E331E155D940018EC42 /* Report1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E321E155D940018EC42 /* Report1ViewController.swift */; };
+		B12A7E361E15663C0018EC42 /* PDFPreviewVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12A7E341E15663C0018EC42 /* PDFPreviewVC.storyboard */; };
+		B12A7E371E15663C0018EC42 /* PDFPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E351E15663C0018EC42 /* PDFPreviewVC.swift */; };
+		B12A7E431E15664E0018EC42 /* AutoreleasepoolTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E391E15664E0018EC42 /* AutoreleasepoolTry.swift */; };
+		B12A7E441E15664E0018EC42 /* DPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E3A1E15664E0018EC42 /* DPIType.swift */; };
+		B12A7E451E15664E0018EC42 /* FilePathConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E3B1E15664E0018EC42 /* FilePathConvertible.swift */; };
+		B12A7E471E15664E0018EC42 /* PDFGenerateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E3D1E15664E0018EC42 /* PDFGenerateError.swift */; };
+		B12A7E481E15664E0018EC42 /* PDFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E3F1E15664E0018EC42 /* PDFGenerator.swift */; };
+		B12A7E491E15664E0018EC42 /* PDFPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E401E15664E0018EC42 /* PDFPage.swift */; };
+		B12A7E4A1E15664E0018EC42 /* PDFPageRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E411E15664E0018EC42 /* PDFPageRenderable.swift */; };
+		B12A7E4B1E15664E0018EC42 /* PDFPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E421E15664E0018EC42 /* PDFPassword.swift */; };
+		B12A7E4D1E157F370018EC42 /* Report2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E4C1E157F370018EC42 /* Report2ViewController.swift */; };
+		B12A7E4F1E15839C0018EC42 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E4E1E15839C0018EC42 /* MainTableViewController.swift */; };
+		B12A7E531E1591720018EC42 /* Report2PresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E521E1591720018EC42 /* Report2PresenterViewController.swift */; };
 		B12BF1881E0FE48C00189BEC /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF1871E0FE48C00189BEC /* Product+CoreDataProperties.swift */; };
 		B1311DFA1DEBEF0D00ECAB4B /* MetalContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */; };
 		B1311DFB1DEBEF0D00ECAB4B /* MetalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */; };
@@ -198,6 +212,21 @@
 		B12A7A881DECD6800036F2BE /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		B12A7A8E1DECE43E0036F2BE /* ProductFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilterViewController.swift; sourceTree = "<group>"; };
 		B12A7E2A1E15393A0018EC42 /* Statistics2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics2ViewController.swift; sourceTree = "<group>"; };
+		B12A7E321E155D940018EC42 /* Report1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report1ViewController.swift; sourceTree = "<group>"; };
+		B12A7E341E15663C0018EC42 /* PDFPreviewVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PDFPreviewVC.storyboard; sourceTree = "<group>"; };
+		B12A7E351E15663C0018EC42 /* PDFPreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFPreviewVC.swift; sourceTree = "<group>"; };
+		B12A7E391E15664E0018EC42 /* AutoreleasepoolTry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoreleasepoolTry.swift; sourceTree = "<group>"; };
+		B12A7E3A1E15664E0018EC42 /* DPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPIType.swift; sourceTree = "<group>"; };
+		B12A7E3B1E15664E0018EC42 /* FilePathConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilePathConvertible.swift; sourceTree = "<group>"; };
+		B12A7E3D1E15664E0018EC42 /* PDFGenerateError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFGenerateError.swift; sourceTree = "<group>"; };
+		B12A7E3E1E15664E0018EC42 /* PDFGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFGenerator.h; sourceTree = "<group>"; };
+		B12A7E3F1E15664E0018EC42 /* PDFGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFGenerator.swift; sourceTree = "<group>"; };
+		B12A7E401E15664E0018EC42 /* PDFPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFPage.swift; sourceTree = "<group>"; };
+		B12A7E411E15664E0018EC42 /* PDFPageRenderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFPageRenderable.swift; sourceTree = "<group>"; };
+		B12A7E421E15664E0018EC42 /* PDFPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFPassword.swift; sourceTree = "<group>"; };
+		B12A7E4C1E157F370018EC42 /* Report2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report2ViewController.swift; sourceTree = "<group>"; };
+		B12A7E4E1E15839C0018EC42 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		B12A7E521E1591720018EC42 /* Report2PresenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report2PresenterViewController.swift; sourceTree = "<group>"; };
 		B12BF1871E0FE48C00189BEC /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentTableViewController.swift; sourceTree = "<group>"; };
 		B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentViewController.swift; sourceTree = "<group>"; };
@@ -380,6 +409,34 @@
 				B1108E371DECA935000FD126 /* InsertionViewController.swift */,
 			);
 			name = Insertions;
+			sourceTree = "<group>";
+		};
+		B12A7E311E155D850018EC42 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				B12A7E341E15663C0018EC42 /* PDFPreviewVC.storyboard */,
+				B12A7E351E15663C0018EC42 /* PDFPreviewVC.swift */,
+				B12A7E321E155D940018EC42 /* Report1ViewController.swift */,
+				B12A7E4C1E157F370018EC42 /* Report2ViewController.swift */,
+				B12A7E521E1591720018EC42 /* Report2PresenterViewController.swift */,
+			);
+			name = Reports;
+			sourceTree = "<group>";
+		};
+		B12A7E381E15664E0018EC42 /* PDFGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B12A7E391E15664E0018EC42 /* AutoreleasepoolTry.swift */,
+				B12A7E3A1E15664E0018EC42 /* DPIType.swift */,
+				B12A7E3B1E15664E0018EC42 /* FilePathConvertible.swift */,
+				B12A7E3D1E15664E0018EC42 /* PDFGenerateError.swift */,
+				B12A7E3E1E15664E0018EC42 /* PDFGenerator.h */,
+				B12A7E3F1E15664E0018EC42 /* PDFGenerator.swift */,
+				B12A7E401E15664E0018EC42 /* PDFPage.swift */,
+				B12A7E411E15664E0018EC42 /* PDFPageRenderable.swift */,
+				B12A7E421E15664E0018EC42 /* PDFPassword.swift */,
+			);
+			path = PDFGenerator;
 			sourceTree = "<group>";
 		};
 		B1311DFC1DEBEF1000ECAB4B /* MetalContent */ = {
@@ -812,6 +869,7 @@
 		B1EA31941DEBCB9400E8FDC2 /* JewelryTrader */ = {
 			isa = PBXGroup;
 			children = (
+				B12A7E381E15664E0018EC42 /* PDFGenerator */,
 				B147E3C01E15223600B54BC5 /* Charts */,
 				B197D5B81DEBCDAB0067F866 /* Storage */,
 				B197D5B61DEBCD8E0067F866 /* Model */,
@@ -847,10 +905,12 @@
 		B1EF1A7F1DEBE9C5009CBFD2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B12A7E311E155D850018EC42 /* Reports */,
 				B1311E0B1DEBF78D00ECAB4B /* Warehouse */,
 				B1311E141DEBF7FA00ECAB4B /* Shop */,
 				B1311E0D1DEBF7AA00ECAB4B /* Statistics */,
 				B1EF1A7E1DEBE9BF009CBFD2 /* Settings */,
+				B12A7E4E1E15839C0018EC42 /* MainTableViewController.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -925,6 +985,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B147E4321E15223600B54BC5 /* Info.plist in Resources */,
+				B12A7E361E15663C0018EC42 /* PDFPreviewVC.storyboard in Resources */,
 				B1EA31A31DEBCB9400E8FDC2 /* LaunchScreen.storyboard in Resources */,
 				B1EA31A01DEBCB9400E8FDC2 /* Assets.xcassets in Resources */,
 				B1EA319B1DEBCB9400E8FDC2 /* Main.storyboard in Resources */,
@@ -952,23 +1013,28 @@
 				B1108E411DECBFD9000FD126 /* SaleViewController.swift in Sources */,
 				B147E3E81E15223600B54BC5 /* LineRadarChartDataSet.swift in Sources */,
 				B147E3F81E15223600B54BC5 /* IPieChartDataSet.swift in Sources */,
+				B12A7E451E15664E0018EC42 /* FilePathConvertible.swift in Sources */,
 				B147E3F01E15223600B54BC5 /* IBarChartDataSet.swift in Sources */,
 				B1C7757B1DED4AA900153BF3 /* Statistics1ViewController.swift in Sources */,
 				B147E3C21E15223600B54BC5 /* ChartAnimator.swift in Sources */,
 				B197D5B11DEBCD660067F866 /* Customer+CoreDataProperties.swift in Sources */,
 				B147E4201E15223600B54BC5 /* ChartYAxisRendererHorizontalBarChart.swift in Sources */,
+				B12A7E531E1591720018EC42 /* Report2PresenterViewController.swift in Sources */,
 				B1EF1A831DEBEA9B009CBFD2 /* MetalTypeViewController.swift in Sources */,
 				B147E4161E15223600B54BC5 /* CandleStickChartRenderer.swift in Sources */,
 				B197D5A71DEBCD660067F866 /* Sale+CoreDataProperties.swift in Sources */,
+				B12A7E371E15663C0018EC42 /* PDFPreviewVC.swift in Sources */,
 				B147E4221E15223600B54BC5 /* CombinedChartRenderer.swift in Sources */,
 				B147E41C1E15223600B54BC5 /* ChartXAxisRendererBarChart.swift in Sources */,
 				B147E3C61E15223600B54BC5 /* CandleStickChartView.swift in Sources */,
+				B12A7E441E15664E0018EC42 /* DPIType.swift in Sources */,
 				B147E4041E15223600B54BC5 /* ChartRange.swift in Sources */,
 				B147E3D71E15223600B54BC5 /* BarChartData.swift in Sources */,
 				B147E3DD1E15223600B54BC5 /* BubbleChartDataEntry.swift in Sources */,
 				B147E4091E15223600B54BC5 /* BubbleChartDataProvider.swift in Sources */,
 				B147E3E71E15223600B54BC5 /* LineChartDataSet.swift in Sources */,
 				B147E3C81E15223600B54BC5 /* CombinedChartView.swift in Sources */,
+				B12A7E431E15664E0018EC42 /* AutoreleasepoolTry.swift in Sources */,
 				B15427221DED54DD00585C14 /* SortableDictionaries.swift in Sources */,
 				B147E41E1E15223600B54BC5 /* ChartXAxisRendererRadarChart.swift in Sources */,
 				B12A7A891DECD6800036F2BE /* ProductViewController.swift in Sources */,
@@ -992,20 +1058,24 @@
 				B1108E431DECCA5D000FD126 /* ProductFilter.swift in Sources */,
 				B147E3CE1E15223600B54BC5 /* ScatterChartView.swift in Sources */,
 				B147E4031E15223600B54BC5 /* ChartHighlighter.swift in Sources */,
+				B12A7E331E155D940018EC42 /* Report1ViewController.swift in Sources */,
 				B147E3CB1E15223600B54BC5 /* PieChartView.swift in Sources */,
 				B147E42E1E15223600B54BC5 /* ChartTransformer.swift in Sources */,
 				B147E3CC1E15223600B54BC5 /* PieRadarChartViewBase.swift in Sources */,
 				B1EF1A821DEBEA9B009CBFD2 /* MetalTypeTableViewController.swift in Sources */,
 				B197D5AC1DEBCD660067F866 /* InsertionType.swift in Sources */,
 				B197D5B21DEBCD660067F866 /* Customer.swift in Sources */,
+				B12A7E4B1E15664E0018EC42 /* PDFPassword.swift in Sources */,
 				B147E3EA1E15223600B54BC5 /* PieChartData.swift in Sources */,
 				B147E3E31E15223600B54BC5 /* ChartDataEntry.swift in Sources */,
 				B147E3F11E15223600B54BC5 /* IBarLineScatterCandleBubbleChartDataSet.swift in Sources */,
 				B147E4151E15223600B54BC5 /* BubbleChartRenderer.swift in Sources */,
+				B12A7E4A1E15664E0018EC42 /* PDFPageRenderable.swift in Sources */,
 				B147E3C41E15223600B54BC5 /* BarLineChartViewBase.swift in Sources */,
 				B147E40C1E15223600B54BC5 /* LineChartDataProvider.swift in Sources */,
 				B147E4281E15223600B54BC5 /* RadarChartRenderer.swift in Sources */,
 				B1108E391DECA935000FD126 /* InsertionViewController.swift in Sources */,
+				B12A7E4D1E157F370018EC42 /* Report2ViewController.swift in Sources */,
 				B197D5A21DEBCD660067F866 /* MetalContent.swift in Sources */,
 				B197D5B41DEBCD660067F866 /* Product.swift in Sources */,
 				B147E3F31E15223600B54BC5 /* ICandleChartDataSet.swift in Sources */,
@@ -1016,6 +1086,7 @@
 				B147E40A1E15223600B54BC5 /* CandleChartDataProvider.swift in Sources */,
 				B197D5A81DEBCD660067F866 /* Sale.swift in Sources */,
 				B147E4061E15223600B54BC5 /* HorizontalBarChartHighlighter.swift in Sources */,
+				B12A7E491E15664E0018EC42 /* PDFPage.swift in Sources */,
 				B147E3DE1E15223600B54BC5 /* BubbleChartDataSet.swift in Sources */,
 				B197D5A01DEBCD660067F866 /* ProductType.swift in Sources */,
 				B197D5A61DEBCD660067F866 /* Color.swift in Sources */,
@@ -1023,6 +1094,7 @@
 				B147E4081E15223600B54BC5 /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */,
 				B147E3DB1E15223600B54BC5 /* BarLineScatterCandleBubbleChartDataSet.swift in Sources */,
 				B147E40D1E15223600B54BC5 /* ScatterChartDataProvider.swift in Sources */,
+				B12A7E471E15664E0018EC42 /* PDFGenerateError.swift in Sources */,
 				B147E41D1E15223600B54BC5 /* ChartXAxisRendererHorizontalBarChart.swift in Sources */,
 				B1EA31981DEBCB9400E8FDC2 /* ViewController.swift in Sources */,
 				B147E4021E15223600B54BC5 /* ChartHighlight.swift in Sources */,
@@ -1068,6 +1140,7 @@
 				B147E40E1E15223600B54BC5 /* AnimatedMoveViewJob.swift in Sources */,
 				B197D5AE1DEBCD660067F866 /* MetalType.swift in Sources */,
 				B147E4101E15223600B54BC5 /* AnimatedZoomViewJob.swift in Sources */,
+				B12A7E481E15664E0018EC42 /* PDFGenerator.swift in Sources */,
 				B147E3FA1E15223600B54BC5 /* IScatterChartDataSet.swift in Sources */,
 				B147E3ED1E15223600B54BC5 /* RadarChartDataSet.swift in Sources */,
 				B1108E401DECBFD9000FD126 /* SalesTableViewController.swift in Sources */,
@@ -1080,6 +1153,7 @@
 				B147E3C51E15223600B54BC5 /* BubbleChartView.swift in Sources */,
 				B147E4071E15223600B54BC5 /* BarChartDataProvider.swift in Sources */,
 				B147E3E11E15223600B54BC5 /* CandleChartDataSet.swift in Sources */,
+				B12A7E4F1E15839C0018EC42 /* MainTableViewController.swift in Sources */,
 				B197D5BA1DEBCF910067F866 /* CoreDataManager.swift in Sources */,
 				B147E42C1E15223600B54BC5 /* ChartPlatform.swift in Sources */,
 				B197D5A31DEBCD660067F866 /* Provider+CoreDataProperties.swift in Sources */,

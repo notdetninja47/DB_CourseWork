@@ -10,5 +10,21 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "Report1ViewController.setLabels(fromSale : Sale) -&gt; ():Report1ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "headerLabel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Report1ViewController.viewDidLoad() -&gt; ():Report1ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "headerLabel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

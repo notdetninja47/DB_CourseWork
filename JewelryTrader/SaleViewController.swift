@@ -21,6 +21,7 @@ class SaleViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var reportButton: UIButton!
     @IBOutlet weak var productTextField: UITextField!
     @IBOutlet weak var customerTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
@@ -60,14 +61,18 @@ class SaleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var dateString = NSDate(timeIntervalSince1970: entity!.date).description
+        dateString = dateString.substringToIndex(dateString.endIndex.advancedBy(-5))
+        
         if entity == nil {
             entity = Sale()
             entity!.date = NSDate().timeIntervalSince1970
-            dateTextField.text = NSDate(timeIntervalSince1970: entity!.date).description
+            dateTextField.text = dateString
+            reportButton.hidden = true
         } else if let entity = entity {
             productTextField.text = entity.product!.name
             customerTextField.text = entity.customer!.fullName
-            dateTextField.text = NSDate(timeIntervalSince1970: entity.date).description
+            dateTextField.text = dateString
             amountTextField.text = String(entity.amount)
             productTextField.text = String(entity.profit)
         }
@@ -101,5 +106,26 @@ class SaleViewController: UIViewController {
         }
         return true
     }
+    
+    @IBAction func showReport(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let report = storyboard.instantiateViewControllerWithIdentifier("Report1") as! Report1ViewController
+        report.sale = entity!
+        
+        presentViewController(report, animated: false, completion: nil)
+        let pdfDestination = report.pdfDestination!
+        report.dismissViewControllerAnimated(false, completion: {
+            self.openPDFViewer(pdfDestination)
+        })
+    }
+    private func openPDFViewer(pdfPath: String) {
+        let url = NSURL(fileURLWithPath: pdfPath)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("PdfViewController") as! PDFPreviewVC
+        vc.setupWithURL(url)
+        presentViewController(vc, animated: true, completion: nil)
+    }
+
+    
 
 }

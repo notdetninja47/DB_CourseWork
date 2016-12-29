@@ -26,4 +26,15 @@ class ProductType: NSManagedObject {
         }
         return results
     }
+    class func getAllTypes() -> [ProductType] {
+        var results = [ProductType]()
+        
+        let fetchRequest = NSFetchRequest(entityName: "ProductType")
+        do{
+            try results = CoreDataManager.instance.managedObjectContext.executeFetchRequest(fetchRequest) as! [ProductType]
+        }catch{
+            print("FETCH REQUEST ERROR")
+        }
+        return results
+    }
 }
