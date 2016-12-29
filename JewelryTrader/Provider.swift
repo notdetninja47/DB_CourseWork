@@ -15,4 +15,5 @@ class Provider: NSManagedObject {
     convenience init() {
         self.init(entity: CoreDataManager.instance.entityForName("Provider"), insertIntoManagedObjectContext: CoreDataManager.instance.managedObjectContext)
     }
+
 }

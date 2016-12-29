@@ -25,4 +25,20 @@ extension Dictionary {
                 return k
         }
     }
+    func keysStringArray() -> [String] {
+        return Array(self).map {
+            let (k, _) = $0
+            return k as! String
+        }
+    }
+    func valuesDoubleArray() -> [Double] {
+        return Array(self).map {
+            let (_, v) = $0
+            if(v is Int){
+                return Double(v as! Int)
+            }
+            return v as! Double
+        }
+    }
+
 }

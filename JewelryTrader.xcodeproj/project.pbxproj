@@ -14,6 +14,7 @@
 		B1108E431DECCA5D000FD126 /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1108E421DECCA5D000FD126 /* ProductFilter.swift */; };
 		B12A7A891DECD6800036F2BE /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A881DECD6800036F2BE /* ProductViewController.swift */; };
 		B12A7A8F1DECE43E0036F2BE /* ProductFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A8E1DECE43E0036F2BE /* ProductFilterViewController.swift */; };
+		B12A7E2B1E15393A0018EC42 /* Statistics2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7E2A1E15393A0018EC42 /* Statistics2ViewController.swift */; };
 		B12BF1881E0FE48C00189BEC /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF1871E0FE48C00189BEC /* Product+CoreDataProperties.swift */; };
 		B1311DFA1DEBEF0D00ECAB4B /* MetalContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */; };
 		B1311DFB1DEBEF0D00ECAB4B /* MetalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */; };
@@ -163,7 +164,6 @@
 		B1A832131DEBDA5F00EC8080 /* ProductTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */; };
 		B1A832151DEBDDF500EC8080 /* ProductTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */; };
 		B1C7757B1DED4AA900153BF3 /* Statistics1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7757A1DED4AA900153BF3 /* Statistics1ViewController.swift */; };
-		B1C7757E1DED4AD900153BF3 /* Statistics2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7757C1DED4AD900153BF3 /* Statistics2ViewController.swift */; };
 		B1C7757F1DED4AD900153BF3 /* Statistics3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7757D1DED4AD900153BF3 /* Statistics3ViewController.swift */; };
 		B1E841B61DEC09C50071B7AC /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E841B41DEC09C50071B7AC /* ProductsTableViewController.swift */; };
 		B1EA31961DEBCB9400E8FDC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA31951DEBCB9400E8FDC2 /* AppDelegate.swift */; };
@@ -197,6 +197,7 @@
 		B1108E421DECCA5D000FD126 /* ProductFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
 		B12A7A881DECD6800036F2BE /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		B12A7A8E1DECE43E0036F2BE /* ProductFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilterViewController.swift; sourceTree = "<group>"; };
+		B12A7E2A1E15393A0018EC42 /* Statistics2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics2ViewController.swift; sourceTree = "<group>"; };
 		B12BF1871E0FE48C00189BEC /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentTableViewController.swift; sourceTree = "<group>"; };
 		B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentViewController.swift; sourceTree = "<group>"; };
@@ -347,7 +348,6 @@
 		B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypesTableViewController.swift; sourceTree = "<group>"; };
 		B1A832141DEBDDF500EC8080 /* ProductTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypeViewController.swift; sourceTree = "<group>"; };
 		B1C7757A1DED4AA900153BF3 /* Statistics1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics1ViewController.swift; sourceTree = "<group>"; };
-		B1C7757C1DED4AD900153BF3 /* Statistics2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics2ViewController.swift; sourceTree = "<group>"; };
 		B1C7757D1DED4AD900153BF3 /* Statistics3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics3ViewController.swift; sourceTree = "<group>"; };
 		B1E841B41DEC09C50071B7AC /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		B1EA31921DEBCB9400E8FDC2 /* JewelryTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelryTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,9 +422,9 @@
 			isa = PBXGroup;
 			children = (
 				B1C7757A1DED4AA900153BF3 /* Statistics1ViewController.swift */,
-				B1C7757C1DED4AD900153BF3 /* Statistics2ViewController.swift */,
 				B1C7757D1DED4AD900153BF3 /* Statistics3ViewController.swift */,
 				B15427211DED54DD00585C14 /* SortableDictionaries.swift */,
+				B12A7E2A1E15393A0018EC42 /* Statistics2ViewController.swift */,
 			);
 			name = Statistics;
 			sourceTree = "<group>";
@@ -1067,7 +1067,6 @@
 				B147E3E01E15223600B54BC5 /* CandleChartDataEntry.swift in Sources */,
 				B147E40E1E15223600B54BC5 /* AnimatedMoveViewJob.swift in Sources */,
 				B197D5AE1DEBCD660067F866 /* MetalType.swift in Sources */,
-				B1C7757E1DED4AD900153BF3 /* Statistics2ViewController.swift in Sources */,
 				B147E4101E15223600B54BC5 /* AnimatedZoomViewJob.swift in Sources */,
 				B147E3FA1E15223600B54BC5 /* IScatterChartDataSet.swift in Sources */,
 				B147E3ED1E15223600B54BC5 /* RadarChartDataSet.swift in Sources */,
@@ -1095,6 +1094,7 @@
 				B147E3D61E15223600B54BC5 /* ChartBaseDataSet.swift in Sources */,
 				B1311E021DEBF2A500ECAB4B /* ColorViewController.swift in Sources */,
 				B147E3FF1E15223600B54BC5 /* ChartFillFormatter.swift in Sources */,
+				B12A7E2B1E15393A0018EC42 /* Statistics2ViewController.swift in Sources */,
 				B147E3FB1E15223600B54BC5 /* ChartDataApproximatorFilter.swift in Sources */,
 				B147E4191E15223600B54BC5 /* ChartLegendRenderer.swift in Sources */,
 				B147E41B1E15223600B54BC5 /* ChartXAxisRenderer.swift in Sources */,

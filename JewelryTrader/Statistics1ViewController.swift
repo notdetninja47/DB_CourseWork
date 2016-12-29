@@ -10,25 +10,28 @@ import UIKit
 
 class Statistics1ViewController: UIViewController {
 
-    @IBOutlet weak var barChart: BarChartView!
+    @IBOutlet weak var monthSelector: UISegmentedControl!
+    @IBOutlet weak var pieChart: PieChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var displayResults = productTypesPopularityPerMonth(basedOnSales: Sale.getAllSales())
-        print(displayResults)
-        var outputString = "Результаты: \n"
-        for key in displayResults.keys {
-            outputString += "Месяц № \(key)\n"
-            for month in displayResults[key]! {
-                outputString += "   ->\(month)\n"
-            }
-        }
-
+        pieChart.descriptionText = "Популярность категорий"
+        pieChart.usePercentValuesEnabled = true
+        
+        pieChart.noDataText = "Нет продаж в этом месяце"
+        pieChart.legend.enabled = false
+        pieChart.infoFont = NSUIFont(name: "Helvetica", size: 20)
+        pieChart.infoTextColor = UIColor.darkTextColor()
+        pieChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: ChartEasingOption.EaseInOutBack)
+       
+        
     }
 
-    func productTypesPopularityPerMonth(basedOnSales sales:[Sale]) -> [Int:[String]]{
+    @IBAction func mothSelected(sender: AnyObject) {
+        showMonth(withNumber: monthSelector.selectedSegmentIndex+1)
+    }
+    func productTypesPopularityPerMonth(basedOnSales sales:[Sale]) -> [Int:[String:Int]]{
         var data = [Int:[String:Int]]()
-        var result = [Int:[String]]()
         let calendar = NSCalendar.currentCalendar()
         
         for sale in sales {
@@ -44,10 +47,37 @@ class Statistics1ViewController: UIViewController {
                 data[components.month]![typeName]!+=1
             }
         }
-        for key in data.keys {
-            result[key] = data[key]!.keysSortedByValue(>)
+        return data
+    }
+    
+    func showMonth(withNumber month:Int) {
+        var data = productTypesPopularityPerMonth(basedOnSales: Sale.getAllSales())
+        print(data)
+     
+        if let dataForMonth = data[month] {
+            setChart(dataForMonth.keysStringArray(), values: dataForMonth.valuesDoubleArray())
+        } else {
+            pieChart.data = nil
         }
-        return result
+    }
+    
+    func setChart(dataPoints: [String], values: [Double]) {
+        
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "Продажи")
+        let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
+        pieChart.data = pieChartData
+        
+        pieChartDataSet.colors = ChartColorTemplates.colorful()
+        
+        pieChart.data!.setValueFont(NSUIFont(name: "Helvetica", size: 20))
+        
     }
 }
 

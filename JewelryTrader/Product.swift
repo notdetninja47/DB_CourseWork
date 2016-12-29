@@ -66,4 +66,15 @@ class Product: NSManagedObject {
         
         return fetchedResultsController
     }
+    class func getAllProducts() -> [Product] {
+        var results = [Product]()
+        
+        let fetchRequest = NSFetchRequest(entityName: "Product")
+        do{
+            try results = CoreDataManager.instance.managedObjectContext.executeFetchRequest(fetchRequest) as! [Product]
+        }catch{
+            print("FETCH REQUEST ERROR")
+        }
+        return results
+    }
 }
