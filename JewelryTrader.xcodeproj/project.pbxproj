@@ -14,6 +14,7 @@
 		B1108E431DECCA5D000FD126 /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1108E421DECCA5D000FD126 /* ProductFilter.swift */; };
 		B12A7A891DECD6800036F2BE /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A881DECD6800036F2BE /* ProductViewController.swift */; };
 		B12A7A8F1DECE43E0036F2BE /* ProductFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A7A8E1DECE43E0036F2BE /* ProductFilterViewController.swift */; };
+		B12BF1881E0FE48C00189BEC /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF1871E0FE48C00189BEC /* Product+CoreDataProperties.swift */; };
 		B1311DFA1DEBEF0D00ECAB4B /* MetalContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */; };
 		B1311DFB1DEBEF0D00ECAB4B /* MetalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */; };
 		B1311E011DEBF2A500ECAB4B /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */; };
@@ -41,11 +42,9 @@
 		B197D5AC1DEBCD660067F866 /* InsertionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5961DEBCD660067F866 /* InsertionType.swift */; };
 		B197D5AD1DEBCD660067F866 /* MetalType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5971DEBCD660067F866 /* MetalType+CoreDataProperties.swift */; };
 		B197D5AE1DEBCD660067F866 /* MetalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5981DEBCD660067F866 /* MetalType.swift */; };
-		B197D5AF1DEBCD660067F866 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5991DEBCD660067F866 /* Photo+CoreDataProperties.swift */; };
 		B197D5B01DEBCD660067F866 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59A1DEBCD660067F866 /* Photo.swift */; };
 		B197D5B11DEBCD660067F866 /* Customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59B1DEBCD660067F866 /* Customer+CoreDataProperties.swift */; };
 		B197D5B21DEBCD660067F866 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59C1DEBCD660067F866 /* Customer.swift */; };
-		B197D5B31DEBCD660067F866 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59D1DEBCD660067F866 /* Product+CoreDataProperties.swift */; };
 		B197D5B41DEBCD660067F866 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D59E1DEBCD660067F866 /* Product.swift */; };
 		B197D5BA1DEBCF910067F866 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197D5B91DEBCF910067F866 /* CoreDataManager.swift */; };
 		B1A832131DEBDA5F00EC8080 /* ProductTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */; };
@@ -72,6 +71,7 @@
 		B1108E421DECCA5D000FD126 /* ProductFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
 		B12A7A881DECD6800036F2BE /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		B12A7A8E1DECE43E0036F2BE /* ProductFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilterViewController.swift; sourceTree = "<group>"; };
+		B12BF1871E0FE48C00189BEC /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B1311DF81DEBEF0D00ECAB4B /* MetalContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentTableViewController.swift; sourceTree = "<group>"; };
 		B1311DF91DEBEF0D00ECAB4B /* MetalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalContentViewController.swift; sourceTree = "<group>"; };
 		B1311DFD1DEBF2A500ECAB4B /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
@@ -99,11 +99,9 @@
 		B197D5961DEBCD660067F866 /* InsertionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionType.swift; sourceTree = "<group>"; };
 		B197D5971DEBCD660067F866 /* MetalType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MetalType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B197D5981DEBCD660067F866 /* MetalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalType.swift; sourceTree = "<group>"; };
-		B197D5991DEBCD660067F866 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B197D59A1DEBCD660067F866 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		B197D59B1DEBCD660067F866 /* Customer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B197D59C1DEBCD660067F866 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
-		B197D59D1DEBCD660067F866 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B197D59E1DEBCD660067F866 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B197D5B91DEBCF910067F866 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B1A832121DEBDA5F00EC8080 /* ProductTypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypesTableViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +239,7 @@
 		B197D5B51DEBCD790067F866 /* Model + Storage */ = {
 			isa = PBXGroup;
 			children = (
+				B12BF1871E0FE48C00189BEC /* Product+CoreDataProperties.swift */,
 				B197D5891DEBCD660067F866 /* ProductType+CoreDataProperties.swift */,
 				B197D58B1DEBCD660067F866 /* MetalContent+CoreDataProperties.swift */,
 				B197D58D1DEBCD660067F866 /* Provider+CoreDataProperties.swift */,
@@ -249,9 +248,7 @@
 				B197D5931DEBCD660067F866 /* Insertion+CoreDataProperties.swift */,
 				B197D5951DEBCD660067F866 /* InsertionType+CoreDataProperties.swift */,
 				B197D5971DEBCD660067F866 /* MetalType+CoreDataProperties.swift */,
-				B197D5991DEBCD660067F866 /* Photo+CoreDataProperties.swift */,
 				B197D59B1DEBCD660067F866 /* Customer+CoreDataProperties.swift */,
-				B197D59D1DEBCD660067F866 /* Product+CoreDataProperties.swift */,
 			);
 			name = "Model + Storage";
 			sourceTree = "<group>";
@@ -449,6 +446,7 @@
 				B12A7A891DECD6800036F2BE /* ProductViewController.swift in Sources */,
 				B197D5AA1DEBCD660067F866 /* Insertion.swift in Sources */,
 				B1311E1B1DEBFCEB00ECAB4B /* CustomersTableViewController.swift in Sources */,
+				B12BF1881E0FE48C00189BEC /* Product+CoreDataProperties.swift in Sources */,
 				B1108E431DECCA5D000FD126 /* ProductFilter.swift in Sources */,
 				B1EF1A821DEBEA9B009CBFD2 /* MetalTypeTableViewController.swift in Sources */,
 				B197D5AC1DEBCD660067F866 /* InsertionType.swift in Sources */,
@@ -474,7 +472,6 @@
 				B1A832151DEBDDF500EC8080 /* ProductTypeViewController.swift in Sources */,
 				B1311E171DEBF83E00ECAB4B /* ProvidersTableViewController.swift in Sources */,
 				B1C7757F1DED4AD900153BF3 /* Statistics3ViewController.swift in Sources */,
-				B197D5B31DEBCD660067F866 /* Product+CoreDataProperties.swift in Sources */,
 				B197D5A41DEBCD660067F866 /* Provider.swift in Sources */,
 				B197D5AE1DEBCD660067F866 /* MetalType.swift in Sources */,
 				B1C7757E1DED4AD900153BF3 /* Statistics2ViewController.swift in Sources */,
@@ -488,7 +485,6 @@
 				B12A7A8F1DECE43E0036F2BE /* ProductFilterViewController.swift in Sources */,
 				B1311E021DEBF2A500ECAB4B /* ColorViewController.swift in Sources */,
 				B197D5A11DEBCD660067F866 /* MetalContent+CoreDataProperties.swift in Sources */,
-				B197D5AF1DEBCD660067F866 /* Photo+CoreDataProperties.swift in Sources */,
 				B197D5A91DEBCD660067F866 /* Insertion+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,7 +32,6 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var metalContent: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var insertionsTextField: UITextField!
-    @IBOutlet weak var photosTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var isPriceCalculatableSwitch: UISwitch!
     
@@ -62,9 +61,6 @@ class ProductViewController: UIViewController {
     }
     @IBAction func selectInsertions(sender: UIButton) {
         performSegueWithIdentifier("productToInsertions", sender: nil)
-    }
-    @IBAction func selectPhotos(sender: AnyObject) {
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

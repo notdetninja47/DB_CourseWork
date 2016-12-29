@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JewelryTrader/ProductViewController.swift"
-            timestampString = "502053442.130612"
+            timestampString = "504358058.801438"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "saveEntity()"
             landmarkType = "5">
          </BreakpointContent>

@@ -2,7 +2,7 @@
 //  Product+CoreDataProperties.swift
 //  JewelryTrader
 //
-//  Created by Daniel Slupskiy on 28.11.16.
+//  Created by Daniel Slupskiy on 25.12.16.
 //  Copyright © 2016 Daniel Slupskiy. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -26,7 +26,6 @@ extension Product {
     @NSManaged var insertions: NSSet?
     @NSManaged var metalContent: MetalContent?
     @NSManaged var metalType: MetalType?
-    @NSManaged var photos: NSSet?
     @NSManaged var provider: Provider?
     @NSManaged var sale: Sale?
     @NSManaged var type: ProductType?

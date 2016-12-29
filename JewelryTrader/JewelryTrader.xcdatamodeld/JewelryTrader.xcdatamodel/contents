@@ -33,10 +33,6 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="products" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Product" inverseName="metalType" inverseEntity="Product" syncable="YES"/>
     </entity>
-    <entity name="Photo" representedClassName="Photo" syncable="YES">
-        <attribute name="fileName" attributeType="String" syncable="YES"/>
-        <relationship name="product" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="photos" inverseEntity="Product" syncable="YES"/>
-    </entity>
     <entity name="Product" representedClassName="Product" syncable="YES">
         <attribute name="incomePrice" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="isPriceCalculatable" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
@@ -50,7 +46,6 @@
         <relationship name="insertions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Insertion" inverseName="product" inverseEntity="Insertion" syncable="YES"/>
         <relationship name="metalContent" maxCount="1" deletionRule="Nullify" destinationEntity="MetalContent" inverseName="products" inverseEntity="MetalContent" syncable="YES"/>
         <relationship name="metalType" maxCount="1" deletionRule="Nullify" destinationEntity="MetalType" inverseName="products" inverseEntity="MetalType" syncable="YES"/>
-        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Photo" inverseName="product" inverseEntity="Photo" syncable="YES"/>
         <relationship name="provider" maxCount="1" deletionRule="Nullify" destinationEntity="Provider" inverseName="products" inverseEntity="Provider" syncable="YES"/>
         <relationship name="sale" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Sale" inverseName="product" inverseEntity="Sale" syncable="YES"/>
         <relationship name="type" maxCount="1" deletionRule="Nullify" destinationEntity="ProductType" inverseName="products" inverseEntity="ProductType" syncable="YES"/>
@@ -80,8 +75,7 @@
         <element name="InsertionType" positionX="241" positionY="132" width="128" height="75"/>
         <element name="MetalContent" positionX="-378" positionY="351" width="128" height="90"/>
         <element name="MetalType" positionX="232" positionY="342" width="128" height="90"/>
-        <element name="Photo" positionX="241" positionY="441" width="128" height="75"/>
-        <element name="Product" positionX="-162" positionY="192" width="128" height="285"/>
+        <element name="Product" positionX="-162" positionY="192" width="128" height="270"/>
         <element name="ProductType" positionX="63" positionY="708" width="128" height="75"/>
         <element name="Provider" positionX="97" positionY="546" width="128" height="120"/>
         <element name="Sale" positionX="-362" positionY="114" width="128" height="120"/>

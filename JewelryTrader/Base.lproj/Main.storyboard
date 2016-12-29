@@ -382,7 +382,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8P-C9-a2v">
-                                <rect key="frame" x="16" y="81" width="82" height="21"/>
+                                <rect key="frame" x="20" y="81" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1436,24 +1436,6 @@
                                     <action selector="selectInsertions:" destination="f6x-nx-9oI" eventType="touchUpInside" id="nYG-wi-ZK5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Фото:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCe-lr-Hjg">
-                                <rect key="frame" x="83" y="532" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bC-a7-JUf">
-                                <rect key="frame" x="137" y="528" width="398" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDM-zb-Rc2">
-                                <rect key="frame" x="543" y="528" width="37" height="30"/>
-                                <state key="normal" title="&gt;"/>
-                                <connections>
-                                    <action selector="selectPhotos:" destination="f6x-nx-9oI" eventType="touchUpInside" id="IK1-0g-kcG"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Цена:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4g-6v-Qy4">
                                 <rect key="frame" x="83" y="566" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1609,7 +1591,6 @@
                         <outlet property="metalContent" destination="e7O-lZ-C1H" id="xn7-pW-vyZ"/>
                         <outlet property="metalTypeTextField" destination="PsF-rf-Dm0" id="jxs-yw-zhy"/>
                         <outlet property="nameTextField" destination="sMH-UU-R5R" id="Isn-BD-bV7"/>
-                        <outlet property="photosTextField" destination="1bC-a7-JUf" id="i7i-LK-68d"/>
                         <outlet property="priceTextField" destination="S9g-25-1H1" id="kob-QN-8e4"/>
                         <outlet property="productTypeTextField" destination="hrB-uK-oht" id="gOP-aL-sAU"/>
                         <outlet property="providerTextField" destination="y11-Uc-lBG" id="cFw-02-T0l"/>
@@ -1722,7 +1703,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5S4-iu-5ns">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5S4-iu-5ns">
                                                     <rect key="frame" x="8" y="5" width="584" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -2415,15 +2396,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MPK-9I-H9m"/>
-        <segue reference="uCz-9d-azH"/>
-        <segue reference="JEU-QW-PTD"/>
-        <segue reference="eG9-ES-s1J"/>
-        <segue reference="Bnq-hg-Z2D"/>
-        <segue reference="clY-DW-YwS"/>
-        <segue reference="ZEf-R2-of3"/>
         <segue reference="P02-o7-SH5"/>
+        <segue reference="clY-DW-YwS"/>
+        <segue reference="uCz-9d-azH"/>
         <segue reference="q6H-6y-MKT"/>
         <segue reference="Nfh-Pn-bpa"/>
+        <segue reference="MPK-9I-H9m"/>
+        <segue reference="vYj-c8-1aG"/>
+        <segue reference="3HI-aQ-fvz"/>
+        <segue reference="e8K-ea-yv6"/>
+        <segue reference="x8f-RX-99a"/>
     </inferredMetricsTieBreakers>
 </document>
