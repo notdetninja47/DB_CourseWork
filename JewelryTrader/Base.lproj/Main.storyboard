@@ -1885,37 +1885,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5S4-iu-5ns">
-                                                    <rect key="frame" x="8" y="5" width="584" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="changeSorting:" destination="P6N-R2-qyj" eventType="editingDidEnd" id="Owg-CY-mIO"/>
-                                                    </connections>
-                                                </textField>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1DO-D3-Bhd">
+                                                    <rect key="frame" x="8" y="7" width="584" height="29"/>
+                                                    <segments>
+                                                        <segment title="Имя"/>
+                                                        <segment title="Артикул"/>
+                                                    </segments>
+                                                </segmentedControl>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="top" secondItem="zLs-Uh-LDN" secondAttribute="topMargin" constant="-3" id="32g-TM-wHc"/>
-                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="leading" secondItem="zLs-Uh-LDN" secondAttribute="leadingMargin" id="5XB-Ms-koJ"/>
-                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="top" secondItem="zLs-Uh-LDN" secondAttribute="topMargin" constant="-1" id="A5r-Nl-4Fp"/>
-                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="trailing" secondItem="zLs-Uh-LDN" secondAttribute="trailingMargin" id="DlG-4x-3Nb"/>
-                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="leading" secondItem="zLs-Uh-LDN" secondAttribute="leadingMargin" id="ISs-f1-Cp7"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="5S4-iu-5ns" secondAttribute="bottom" constant="0.5" id="UKj-db-K5e"/>
-                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="leading" secondItem="zLs-Uh-LDN" secondAttribute="leadingMargin" id="Zvf-ht-PFG"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="5S4-iu-5ns" secondAttribute="bottom" constant="0.5" id="cQf-nT-Zs4"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="5S4-iu-5ns" secondAttribute="bottom" constant="-1.5" id="kSI-Zf-DgQ"/>
-                                                <constraint firstItem="5S4-iu-5ns" firstAttribute="top" secondItem="zLs-Uh-LDN" secondAttribute="topMargin" constant="-3" id="nH7-B0-z3T"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1DO-D3-Bhd" secondAttribute="bottom" id="1SV-fn-h9q"/>
+                                                <constraint firstItem="1DO-D3-Bhd" firstAttribute="leading" secondItem="zLs-Uh-LDN" secondAttribute="leadingMargin" id="f7W-JZ-6Dp"/>
+                                                <constraint firstItem="1DO-D3-Bhd" firstAttribute="top" secondItem="zLs-Uh-LDN" secondAttribute="topMargin" id="hkY-db-1Eu"/>
+                                                <constraint firstItem="1DO-D3-Bhd" firstAttribute="trailing" secondItem="zLs-Uh-LDN" secondAttribute="trailingMargin" id="o1W-Zo-ERu"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="32g-TM-wHc"/>
-                                                    <exclude reference="5XB-Ms-koJ"/>
-                                                    <exclude reference="A5r-Nl-4Fp"/>
-                                                    <exclude reference="ISs-f1-Cp7"/>
-                                                    <exclude reference="UKj-db-K5e"/>
-                                                    <exclude reference="kSI-Zf-DgQ"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -2163,7 +2146,7 @@
                         <outlet property="nameTextField" destination="haN-2y-jeR" id="tID-1Q-6lf"/>
                         <outlet property="onlyAvailable" destination="uXa-au-gpA" id="s4a-ch-X8K"/>
                         <outlet property="productTypeTextField" destination="bPY-1G-36M" id="oPY-nK-nMb"/>
-                        <outlet property="sorting" destination="5S4-iu-5ns" id="NgA-iM-U05"/>
+                        <outlet property="sortingView" destination="1DO-D3-Bhd" id="PSl-kD-Mpf"/>
                         <segue destination="mvj-py-nYB" kind="popoverPresentation" identifier="filterToMetalTypes" popoverAnchorView="4Eb-Tf-uXD" id="Nfh-Pn-bpa">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
@@ -2819,12 +2802,12 @@
         <segue reference="XgC-yH-UZR"/>
         <segue reference="RlM-Q6-En0"/>
         <segue reference="3nf-5K-vbC"/>
+        <segue reference="Nfh-Pn-bpa"/>
+        <segue reference="MPK-9I-H9m"/>
+        <segue reference="q6H-6y-MKT"/>
         <segue reference="3HI-aQ-fvz"/>
         <segue reference="e8K-ea-yv6"/>
         <segue reference="vYj-c8-1aG"/>
         <segue reference="x8f-RX-99a"/>
-        <segue reference="XB4-sL-MHt"/>
-        <segue reference="zML-sF-lnp"/>
-        <segue reference="co3-iH-ffo"/>
     </inferredMetricsTieBreakers>
 </document>

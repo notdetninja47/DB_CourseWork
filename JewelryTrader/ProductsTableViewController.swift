@@ -14,6 +14,12 @@ class ProductsTableViewController: UITableViewController, NSFetchedResultsContro
     @IBOutlet weak var addButton: UIBarButtonItem!
     typealias Select = (Product?) -> ()
     var didSelect: Select?
+    var searchQuery:String {
+        if let filter = productFilterState {
+            return filter.nameSearch ?? ""
+        }
+        return ""
+    }
     var productFilterState:ProductFilter? {
         didSet{
             fetchedResultsController = productFilterState!.fetchedResultsController
@@ -51,6 +57,9 @@ class ProductsTableViewController: UITableViewController, NSFetchedResultsContro
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let product = fetchedResultsController.objectAtIndexPath(indexPath) as! Product
         let cell = UITableViewCell()
+        if searchQuery != "" && !product.name!.containsString(searchQuery) {
+            cell.backgroundColor = UIColor.lightGrayColor()
+        }
         cell.textLabel?.text = "\(product.sku ?? "") : \(product.name ?? "")"
         return cell
     }

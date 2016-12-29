@@ -10,16 +10,12 @@ import UIKit
 
 class ProductFilterViewController: UITableViewController {
 
-    
     var productsTable: ProductsTableViewController?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var minPrice: UITextField!
     @IBOutlet weak var maxPrice: UITextField!
-    @IBOutlet weak var sorting: UITextField!
-    @IBAction func changeSorting(sender: UITextField) {
-        
-    }
+    @IBOutlet weak var sortingView: UISegmentedControl!
     
     @IBOutlet weak var productTypeTextField: UITextField!
     @IBAction func selectProductType(sender: UIButton) {
@@ -94,7 +90,7 @@ class ProductFilterViewController: UITableViewController {
         productFilter.nameSearch = nameTextField.text
         productFilter.onlyAvailable = onlyAvailable.on
         productFilter.productType = productType
-        productFilter.sortKey = sorting.text!
+        productFilter.sortKey = sortingView.selectedSegmentIndex == 0 ? "name" : "sku"
         productsTable!.productFilterState = productFilter
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -111,6 +107,6 @@ class ProductFilterViewController: UITableViewController {
         onlyAvailable.on = productFilter.onlyAvailable
         productType = productFilter.productType
         productTypeTextField.text = productFilter.productType?.name
-        sorting.text = productFilter.sortKey
+        sortingView.selectedSegmentIndex = (productFilter.sortKey == "name" ? 0 : 1)
     }
 }

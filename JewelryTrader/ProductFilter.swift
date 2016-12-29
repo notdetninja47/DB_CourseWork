@@ -27,11 +27,6 @@ class ProductFilter {
         result.sortDescriptors = [sortDescriptor]
         
         var predicates = [NSPredicate]()
-        if let name = nameSearch {
-            if !name.isEmpty {
-                predicates.append(NSPredicate(format: "%K CONTAINS[cd] %@", "name", name))
-            }
-        }
         if let minPrice = minPrice {
             predicates.append(NSPredicate(format: "%K > %@", "price", minPrice))
         }
