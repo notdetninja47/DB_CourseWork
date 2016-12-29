@@ -11,6 +11,7 @@ import CoreData
 
 class ProductTypesTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     typealias Select = (ProductType?) -> ()
     var didSelect: Select?
 
@@ -18,6 +19,11 @@ class ProductTypesTableViewController: UITableViewController, NSFetchedResultsCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if didSelect != nil {
+            addButton.enabled = false
+        }
+        
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()

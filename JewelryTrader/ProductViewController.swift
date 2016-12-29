@@ -20,6 +20,7 @@ class ProductViewController: UIViewController {
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
+    @IBOutlet weak var insertionsSelectButton: UIButton!
     @IBOutlet weak var skuTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var productTypeTextField: UITextField!
@@ -118,9 +119,8 @@ class ProductViewController: UIViewController {
 
         if entity == nil {
             entity = Product()
+            insertionsSelectButton.enabled = false
             isPriceCalculatableSwitch.on = false
-            
-            
         } else if let entity = entity {
             skuTextField.text = entity.sku
             nameTextField.text = entity.name

@@ -514,6 +514,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="SF5-BX-MW2" id="JYG-5U-cSz"/>
                         <segue destination="aa5-xy-XWW" kind="presentation" identifier="productTypesToProductType" modalPresentationStyle="currentContext" id="YnS-Zh-Ql3"/>
                     </connections>
                 </tableViewController>
@@ -644,6 +645,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="eZy-wy-dRi" id="Hva-y7-9x0"/>
                         <segue destination="Yfe-Dg-aMS" kind="presentation" identifier="metalTypesToMetalType" modalPresentationStyle="currentContext" id="1lb-6x-1k8"/>
                     </connections>
                 </tableViewController>
@@ -717,7 +719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNe-r0-9MY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="3033"/>
+            <point key="canvasLocation" x="1236" y="3162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nc3-z5-MeD">
@@ -758,6 +760,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="1Ph-VS-rVo" id="szb-Aq-Bui"/>
                         <segue destination="tVY-Vv-xVR" kind="presentation" identifier="metalContentsToMetalContent" modalPresentationStyle="currentContext" id="V1u-g3-Ssa"/>
                     </connections>
                 </tableViewController>
@@ -831,7 +834,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfA-wf-JJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="3042"/>
+            <point key="canvasLocation" x="2012" y="3162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rh6-9i-OsE">
@@ -872,6 +875,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="4Wp-kB-tBS" id="U24-EB-WSo"/>
                         <segue destination="4c0-r8-ciH" kind="presentation" identifier="colorsToColor" modalPresentationStyle="currentContext" id="Zzf-b8-wlR"/>
                     </connections>
                 </tableViewController>
@@ -933,7 +937,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLj-5j-UWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2788" y="3074"/>
+            <point key="canvasLocation" x="2788" y="3162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XMA-8F-Itc">
@@ -1035,7 +1039,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RX-Cf-T15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3508" y="3074"/>
+            <point key="canvasLocation" x="3508" y="3162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Cv-th-bSI">
@@ -1216,6 +1220,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="cHu-J9-QUX" id="VTs-9a-q37"/>
                         <segue destination="2Tb-VA-5Xs" kind="presentation" identifier="customersToCustomer" modalPresentationStyle="currentContext" id="8zv-TP-aCL"/>
                     </connections>
                 </tableViewController>
@@ -1356,6 +1361,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="wGb-zy-667" id="JG2-9P-KLU"/>
                         <segue destination="PCq-Vs-69a" kind="presentation" identifier="providersToProvider" modalPresentationStyle="currentContext" id="3O8-A9-Qpm"/>
                     </connections>
                 </tableViewController>
@@ -1501,6 +1507,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="B9B-ea-MT2" id="8PM-vv-DbF"/>
                         <segue destination="f6x-nx-9oI" kind="presentation" identifier="productsToProduct" modalPresentationStyle="currentContext" id="OhF-Cx-h7A"/>
                         <segue destination="P6N-R2-qyj" kind="popoverPresentation" identifier="showFilter" popoverAnchorBarButtonItem="WFf-LQ-Zfh" id="RhN-s9-6Xp">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -1760,6 +1767,7 @@
                     <connections>
                         <outlet property="colorTextField" destination="EWh-8z-LZH" id="eW1-Gm-q1H"/>
                         <outlet property="incomePriceTextField" destination="9bQ-Ut-axG" id="Tp7-q5-6yu"/>
+                        <outlet property="insertionsSelectButton" destination="2Wq-26-UWZ" id="pGD-J0-eLe"/>
                         <outlet property="insertionsTextField" destination="OW9-KX-lYB" id="pMS-lP-oJx"/>
                         <outlet property="isPriceCalculatableSwitch" destination="SCg-aQ-w4e" id="ZkR-Th-WQ7"/>
                         <outlet property="metalContent" destination="e7O-lZ-C1H" id="xn7-pW-vyZ"/>
@@ -2210,6 +2218,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="SfA-7Z-QBE" id="DCq-5N-ph0"/>
                         <segue destination="Tz8-0X-dCx" kind="presentation" identifier="salesToSale" modalPresentationStyle="currentContext" id="CrX-gI-00m"/>
                     </connections>
                 </tableViewController>
@@ -2807,15 +2816,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="clY-DW-YwS"/>
-        <segue reference="P02-o7-SH5"/>
-        <segue reference="JEU-QW-PTD"/>
-        <segue reference="ZEf-R2-of3"/>
-        <segue reference="Bnq-hg-Z2D"/>
-        <segue reference="uCz-9d-azH"/>
-        <segue reference="eG9-ES-s1J"/>
+        <segue reference="XgC-yH-UZR"/>
+        <segue reference="RlM-Q6-En0"/>
+        <segue reference="3nf-5K-vbC"/>
+        <segue reference="3HI-aQ-fvz"/>
+        <segue reference="e8K-ea-yv6"/>
+        <segue reference="vYj-c8-1aG"/>
+        <segue reference="x8f-RX-99a"/>
+        <segue reference="XB4-sL-MHt"/>
         <segue reference="zML-sF-lnp"/>
         <segue reference="co3-iH-ffo"/>
-        <segue reference="XB4-sL-MHt"/>
     </inferredMetricsTieBreakers>
 </document>

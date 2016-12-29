@@ -11,6 +11,7 @@ import CoreData
 
 class ColorTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    @IBOutlet weak var addButton: UIBarButtonItem!
     typealias Select = (Color?) -> ()
     var didSelect: Select?
     
@@ -19,6 +20,12 @@ class ColorTableViewController: UITableViewController, NSFetchedResultsControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchedResultsController.delegate = self
+        
+        if didSelect != nil {
+            addButton.enabled = false
+        }
+        
+
         do {
             try fetchedResultsController.performFetch()
         } catch {

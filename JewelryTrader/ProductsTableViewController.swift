@@ -11,6 +11,7 @@ import CoreData
 
 class ProductsTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     typealias Select = (Product?) -> ()
     var didSelect: Select?
     var productFilterState:ProductFilter? {
@@ -29,6 +30,11 @@ class ProductsTableViewController: UITableViewController, NSFetchedResultsContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if didSelect != nil {
+            addButton.enabled = false
+        }
+        
         productFilterState = ProductFilter()
     }
     

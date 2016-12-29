@@ -11,6 +11,7 @@ import CoreData
 
 class CustomersTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     typealias Select = (Customer?) -> ()
     var didSelect: Select?
     
@@ -18,6 +19,11 @@ class CustomersTableViewController: UITableViewController, NSFetchedResultsContr
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if didSelect != nil {
+            addButton.enabled = false
+        }
+        
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()

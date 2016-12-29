@@ -11,13 +11,19 @@ import CoreData
 
 class MetalContentTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    @IBOutlet weak var addButton: UIBarButtonItem!
     typealias Select = (MetalContent?) -> ()
     var didSelect: Select?
-    
+
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController("MetalContent", keyForSort: "name")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if didSelect != nil {
+            addButton.enabled = false
+        }
+        
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()
