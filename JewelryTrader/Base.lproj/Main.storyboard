@@ -2201,7 +2201,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="SfA-7Z-QBE" id="DCq-5N-ph0"/>
                         <segue destination="Tz8-0X-dCx" kind="presentation" identifier="salesToSale" modalPresentationStyle="currentContext" id="CrX-gI-00m"/>
                     </connections>
                 </tableViewController>

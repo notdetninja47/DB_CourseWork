@@ -99,8 +99,8 @@ class ProductFilterViewController: UITableViewController {
         let productFilter = productsTable!.productFilterState!
         color = productFilter.color
         colorTextField.text = productFilter.color?.name
-        maxPrice.text = String(_cocoaString: (productFilter.maxPrice ?? ""))
-        minPrice.text = String(_cocoaString: (productFilter.minPrice ?? ""))
+        maxPrice.text = productFilter.maxPrice == nil ? "":"\(productFilter.maxPrice!)"
+        minPrice.text = productFilter.minPrice == nil ? "":"\(productFilter.minPrice!)"
         metalType = productFilter.metalType
         metalTypeTextField.text = productFilter.metalType?.name
         nameTextField.text = String(_cocoaString: (productFilter.nameSearch ?? ""))

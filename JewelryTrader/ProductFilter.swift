@@ -28,10 +28,10 @@ class ProductFilter {
         
         var predicates = [NSPredicate]()
         if let minPrice = minPrice {
-            predicates.append(NSPredicate(format: "%K > %@", "price", minPrice))
+            predicates.append(NSPredicate(format: "price > \(minPrice)"))
         }
         if let maxPrice = maxPrice {
-            predicates.append(NSPredicate(format: "%K < %@", "price", maxPrice))
+            predicates.append(NSPredicate(format: "price < \(maxPrice)"))
         }
         if onlyAvailable {
             predicates.append(NSPredicate(format: "sale = nil"))
